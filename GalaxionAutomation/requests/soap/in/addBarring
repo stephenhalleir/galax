@@ -1,0 +1,29 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.meteor.ie/MeteorSOA_Provisioning/v1" xmlns:com="http://www.meteor.ie/SOA/1.0/Common" xmlns:v11="http://www.meteor.ie/MID/Product/ProductOffering/ProductCatalog/v1" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header/>
+   <soapenv:Body>
+   <v1:AddNetworkServiceRequest xmlns:ns10="http://www.meteor.ie/MID/CommonBusinessEntities/BaseTypes/Address/v1" xmlns:ns11="http://www.meteor.ie/SOA/1.0/Common" xmlns:ns13="http://www.meteor.ie/MeteorSOA_Provisioning/v1" xmlns:ns14="http://www.meteor.ie/MID/CommonBusinessEntities/Payment/Card/v1" xmlns:ns15="http://www.meteor.ie/MID/CommonBusinessEntities/Party/Contact/v1" xmlns:ns16="http://www.meteor.ie/MID/Resource/ResourceSpecification/PhysicalResourceSpecification/v1" xmlns:ns17="http://www.meteor.ie/MID/Resource/PhysicalResource/PhysicalResource/v1" xmlns:ns18="http://www.meteor.ie/MID/Resource/LogicalResource/LogicalResource/v1" xmlns:ns19="http://www.meteor.ie/MID/Resource/PhysicalResource/Pack/v1" xmlns:ns2="http://www.meteor.ie/MID/Customer/Customer/v1" xmlns:ns20="http://www.meteor.ie/MID/Product/ProductPrice/ProductPrice/v1" xmlns:ns3="http://www.meteor.ie/MID/Customer/Customer/CustomerCreditProfile/v1" xmlns:ns4="http://www.meteor.ie/MID/CommonBusinessEntities/Party/PartyRoles/v1" xmlns:ns5="http://www.meteor.ie/MID/CommonBusinessEntities/MarketSaleDomain/SalesChannel/v1" xmlns:ns6="http://www.meteor.ie/MID/Product/ProductOffering/ProductCatalog/v1" xmlns:ns7="http://www.meteor.ie/MID/CommonBusinessEntities/BaseTypes/BaseTypes/v1" xmlns:ns8="http://www.meteor.ie/MID/Product/ProductOffering/ProductOfferingPrice/v1" xmlns:ns9="http://www.meteor.ie/MID/CommonBusinessEntities/Party/Party/v1">
+      <com:serviceUser>
+        <com:user>EIR</com:user>
+            <com:applicationDescriptor>SH</com:applicationDescriptor>
+            <com:applicationIdentifier>SH</com:applicationIdentifier>
+         </com:serviceUser>
+         <Msisdn>$msisdn</Msisdn>
+         <v11:SubscriberId>$subscriberId</v11:SubscriberId>
+         <v1:EventContext>SV:2375-0</v1:EventContext>
+         <v1:CFService>
+        <v1:ServiceCategory>Barring</v1:ServiceCategory>
+            <ServiceID>General Bar Service</ServiceID>
+            <!--Optional:-->
+            <v1:ServiceParameters>
+               <!--1 or more repetitions:-->
+               <com:keyValue>
+                  <com:key>type</com:key>
+                  <com:value>$barType</com:value>
+               </com:keyValue>
+            </v1:ServiceParameters>
+         </v1:CFService>
+         <v1:ExtendedServiceData>0</v1:ExtendedServiceData>
+         <v1:NotificationSent>false</v1:NotificationSent>
+      </v1:AddNetworkServiceRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

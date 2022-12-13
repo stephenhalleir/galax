@@ -1,0 +1,26 @@
+*************************************
+* HEADER DESCRIPTION
+*************************************
+Customer : METEOR MOBILE COMMUNICATIONS
+Quantity: 5
+Type: UNIVERSAL
+Batch: 51
+Address: My Address
+Transport_Key: My Transport Key
+Artwork: My Artwork
+SIM_Reference: My SIM Reference
+*
+****************************
+*    INPUT VARIABLES       *
+****************************
+Var_In: IMSI/ICCID/MSISDN
+****************************
+*    OUTPUT VARIABLES      *
+****************************
+Var_Out: Ki/PIN1/PUK1/PIN2/PUK2/ADM1
+***************************************
+272039700000190 893530305241000072LF
+272039700000191 893530305241000073LF
+272039700000192 893530305241000074LF
+272039700000193 893530305241000075LF
+272039700000194 893530305241000076LF

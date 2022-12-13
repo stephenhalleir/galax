@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<config>
+
+	<EMAILS>
+	
+		<!-- this email is triggered when a customer's order completes -->
+		<EMAIL id="welcomeEmail">
+			<SUBJECT>Welcome to GoMo</SUBJECT>
+			<CONTAINS>Welcome to GoMo</CONTAINS>
+			<BEFORESTRING>Log in to MyGoMo</BEFORESTRING>
+			<AFTERSTRING>That's it</AFTERSTRING>
+		</EMAIL>
+	
+		<!-- this email is triggered when a customer completes a sales order -->
+		<EMAIL id="verifyEmail">
+			<SUBJECT>Your GoMo Account</SUBJECT>
+			<CONTAINS>Verify Email</CONTAINS>
+			<BEFORESTRING>To proceed please click here</BEFORESTRING>
+			<AFTERSTRING>This link will expire</AFTERSTRING>
+		</EMAIL>
+		
+		<!-- this email is triggered when a customer updates their email address in MyAccount -->
+		<EMAIL id="confirmEmailChange">
+			<SUBJECT>Confirm your new email address</SUBJECT>
+			<CONTAINS></CONTAINS>
+			<BEFORESTRING>Please click here</BEFORESTRING>
+			<AFTERSTRING> to confirm the change</AFTERSTRING>
+		</EMAIL>
+		
+		<!-- this email is triggered when a customer performs a password reset via MyAccount -->
+		<EMAIL id="updatePassword">
+			<SUBJECT>Your GoMo Account</SUBJECT>
+			<CONTAINS>Update Password</CONTAINS>
+			<BEFORESTRING>To proceed please click here</BEFORESTRING>
+			<AFTERSTRING>This link will expire</AFTERSTRING>
+		</EMAIL>
+		
+		
+		<!-- this email is triggered when a customer performs a password reset via MyAccount -->
+		<EMAIL id="updatePasswordEir">
+			<SUBJECT>Your GoMo Account</SUBJECT>
+			<CONTAINS>Update Password</CONTAINS>
+			<BEFORESTRING>To proceed please click here</BEFORESTRING>
+			<AFTERSTRING>This link will expire in 12 hours</AFTERSTRING>
+		</EMAIL>
+		
+		<!-- this email is triggered when a customer selects 'Forgot your password?' on the keycloak login screen -->
+		<EMAIL id="forgotPassword">
+			<SUBJECT>GoMo - Change Your Password</SUBJECT>
+			<CONTAINS></CONTAINS>
+			<BEFORESTRING>To reset your password, follow this link</BEFORESTRING>
+			<AFTERSTRING>. </AFTERSTRING>
+		</EMAIL>
+		
+	</EMAILS>
+</config>

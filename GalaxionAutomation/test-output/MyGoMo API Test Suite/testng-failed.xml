@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MyGoMo API Test Suite]">
+  <test thread-count="5" name="Test(failed)" parallel="methods">
+    <classes>
+      <class name="testCases.gomo.api.TestMyGoMoApi">
+        <methods>
+          <include name="MGO_A_AD_07_testGetReplacementSIMCardCharge"/>
+          <include name="MGO_A_AD_09_testActivateSimSwap"/>
+          <include name="tearDownMethod"/>
+          <include name="MGO_A_PY_04_testUpdateCardExpiryDate"/>
+          <include name="MGO_A_AD_13_testTriggerPortingOTP"/>
+          <include name="MGO_A_PR_02_testGetPermissions"/>
+          <include name="setUp"/>
+          <include name="MGO_A_PY_03_testGetTransactionHistory"/>
+          <include name="MGO_A_AD_10_testGetDeliveryAddress"/>
+          <include name="MGO_A_PR_08_testUpdateNDDSetting"/>
+          <include name="MGO_A_PR_10_testUpdateEmailAddress"/>
+          <include name="MGO_A_PR_01_testGetContacts"/>
+          <include name="MGO_A_PY_01_testGetAccountBalance"/>
+          <include name="MGO_A_AD_14_testValidatePortingOTP"/>
+          <include name="MGO_A_AD_01_testGetAccounts"/>
+          <include name="MGO_A_AD_12_testGetPortingHours"/>
+          <include name="MGO_A_PR_06_testEircodeLookup"/>
+          <include name="MGO_A_AD_03_testGetSubscriptions"/>
+          <include name="afterSuite"/>
+          <include name="MGO_A_PR_05_testUpdateDeliveryAddress"/>
+          <include name="MGO_S_US_02_testGetUsageSummary"/>
+          <include name="setUpMethod"/>
+          <include name="MGO_A_PR_04_testGetBillingAddress"/>
+          <include name="MGO_A_PY_06_testMakeCardDefault"/>
+          <include name="MGO_A_PR_03_testUpdatePermissions"/>
+          <include name="MGO_A_PR_05_testUpdateBillingAddress"/>
+          <include name="MGO_A_AL_02_testDismissWebNotifications"/>
+          <include name="MGO_A_PR_07_testGetNDD"/>
+          <include name="MGO_A_AD_04_testGetOffer"/>
+          <include name="MGO_A_PY_02_testGetPayer"/>
+          <include name="MGO_A_AD_05_testGetFullOrderHistory"/>
+          <include name="MGO_S_US_01_testGetUsageDetails"/>
+          <include name="MGO_A_AL_01_testGetWebNotifications"/>
+          <include name="MGO_A_AD_11_testGetBarrings"/>
+          <include name="MGO_A_PR_11_testGetService"/>
+          <include name="setUpSuite"/>
+          <include name="MGO_A_HS_01_testGetWebNotificationCount"/>
+          <include name="BeforeMethod"/>
+          <include name="BeforeMethod"/>
+          <include name="MGO_A_AD_08_testOrderReplacementSIM"/>
+          <include name="MGO_A_AD_06_testGetCompletedOrders"/>
+          <include name="tearDown"/>
+          <include name="MGO_A_AD_02_testGetServices"/>
+          <include name="MGO_S_US_03_testGetRatingSubtotalTypes"/>
+          <include name="testLogin"/>
+          <include name="MGO_A_PR_09_testTriggerPasswordReset"/>
+          <include name="MGO_A_PY_05_testGenerateHPP"/>
+        </methods>
+      </class> <!-- testCases.gomo.api.TestMyGoMoApi -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [MyGoMo API Test Suite] -->

@@ -1,0 +1,33 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.meteor.ie/SOA/1.0/MeteorDataModelINProvisioning/v1" xmlns:com="http://www.meteor.ie/SOA/1.0/Common" xmlns:v11="http://www.meteor.ie/MID/Resource/LogicalResource/LogicalResource/v1" xmlns:v12="http://www.meteor.ie/MID/Product/ProductOffering/ProductCatalog/v1" xmlns:v13="http://www.meteor.ie/MID/CommonBusinessEntities/Party/Party/v1" xmlns:v14="http://www.meteor.ie/SOA/1.0/MeteorDataModelIN/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:createSubscriberWithBalance>
+         <com:serviceUser>
+            <com:user>Stephen</com:user>
+            <com:applicationDescriptor>SOAPUI</com:applicationDescriptor>
+            <com:applicationIdentifier>Manual</com:applicationIdentifier>
+            <!--Optional:-->
+            <com:primaryPersonalIdentity>Tester</com:primaryPersonalIdentity>
+            <!--Optional:-->
+            <com:onBehalfOfPersonalIdentity>CreateSub</com:onBehalfOfPersonalIdentity>
+         </com:serviceUser>
+         <v11:Msisdn>$msisdn</v11:Msisdn>
+         <v1:TariffPlan>
+            <v12:BaseProductOfferingName>$tariffPlan</v12:BaseProductOfferingName>
+         </v1:TariffPlan>
+         <v13:OrganisationName>
+            <v13:TradingName>METEOR</v13:TradingName>
+         </v13:OrganisationName>
+         <v1:PreActiveCredit>0</v1:PreActiveCredit>
+         <!--Optional:-->
+         <v1:CFSP>$cfsp</v1:CFSP>
+         <v1:Correlation>
+            <v14:correlationID>$msisdn</v14:correlationID>
+         </v1:Correlation>
+         <!--Optional:-->
+         <v1:billing_cycle_name>8th PAYG Customers Only</v1:billing_cycle_name>
+         <!--Optional:-->
+         <v1:billing_cycle_date>2020-05-31T00:00:00Z</v1:billing_cycle_date>
+      </v1:createSubscriberWithBalance>
+   </soapenv:Body>
+</soapenv:Envelope>

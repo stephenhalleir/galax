@@ -1,0 +1,51 @@
+{
+   "eventType":"CHANGE_OFFER_ORDER",
+   "eventTime":"2021-10-14T14:00:00",
+   "event":{
+      "changeOfferOrder":{
+         "orderType":"CROSS_SELL",
+         "reference":"$reference",
+         "externalId":"$externalRef",
+         "channel":{
+            "brand":"EIR",
+            "channelGroup":"TELESALES",
+            "channelType":"INDIRECT"
+         },
+         "customer":{
+            "existingAccount":{
+               "subscriptionAccountId":$subscriptionAccountId,
+               "billingAccountId":$billingAccountId
+            }
+         },
+         "offer":{
+            "catalogOfferId": 3020,
+			"offerType": "POSTPAY",
+			"domain": "MOBILE",
+			"tariffPlanCode": "BP_EM_CONN_PLUS5G_1_CO",
+            "service":{
+               "subscriptionServiceId":$subscriptionServiceId,
+               "serviceName":"$serviceName"
+            },
+            "contract":{
+               "reContract":false,
+               "changeReason":"UPGRADE"
+            },
+            "item": {
+					"networks": [],
+					"charges": [{
+						"catalogItemId": 36223,
+						"pricePlan": {
+							"catalogItemId": 36200,
+							"price": 2999
+						}
+					}],
+					"usages": [
+						{
+							"catalogItemId": 32107
+						}
+					]
+				}
+			}
+		}
+	}
+}

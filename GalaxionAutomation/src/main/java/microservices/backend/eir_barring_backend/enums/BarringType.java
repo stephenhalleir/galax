@@ -1,0 +1,13 @@
+package microservices.backend.eir_barring_backend.enums;
+
+public enum BarringType {
+	BAR_FULL_NETWORK,
+	BAR_OUTGOING_SERVICE,
+	BAR_HIGH_VALUE_NUMBERS,
+	BAR_PREMIUM_SMS,
+	BAR_FULL_SUSPEND,
+	BAR_PARTIAL_SUSPEND,
+	BAR_ROAMING,
+	BAR_PREMIUM_CALLS,
+	BAR_INTERNATIONAL_CALLS
+}

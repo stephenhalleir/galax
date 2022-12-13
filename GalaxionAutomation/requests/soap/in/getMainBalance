@@ -1,0 +1,16 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.meteor.ie/SOA/1.0/MeteorDataModelINQuery/v1" xmlns:com="http://www.meteor.ie/SOA/1.0/Common" xmlns:v11="http://www.meteor.ie/MID/Resource/LogicalResource/LogicalResource/v1" xmlns:v12="http://www.meteor.ie/SOA/1.0/MeteorDataModelIN/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getMainBalance>
+         <com:serviceUser>
+            <com:user>Test</com:user>
+            <com:applicationDescriptor>Test</com:applicationDescriptor>
+            <com:applicationIdentifier>Test</com:applicationIdentifier>            
+         </com:serviceUser>
+         <v11:Msisdn>$msisdn</v11:Msisdn>
+         <v1:Correlation>
+            <v12:correlationID>10</v12:correlationID>
+         </v1:Correlation>
+      </v1:getMainBalance>
+   </soapenv:Body>
+</soapenv:Envelope>

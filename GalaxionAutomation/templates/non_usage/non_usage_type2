@@ -1,0 +1,3 @@
+Record Type,MSISDN,Pre-paid Indicator,Date/Time,Recharge Code,Transaction ID,Amount,Balance Type,Unit Type,Balance,Confirmation #,Voucher #,Status,Price Plan,Reserved,Reserved,Reserved,Reserved,Error Code,Error Message
+2,$msisdn,T,$timestamp,,$transactionId,,,,,,,3,,,,,,,
+99,,,,,,0.0000,,,3,,,,,,,,,,

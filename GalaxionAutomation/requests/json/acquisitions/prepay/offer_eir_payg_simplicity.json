@@ -1,0 +1,52 @@
+{
+	"catalogOfferId": 2001,
+	"offerType": "PREPAY",
+	"domain": "MOBILE",
+	"service": {
+		"serviceName": null,
+		"orderServiceStatus": "INITIAL",
+		"port": null,
+		"directoryPreference": "EXDIRECTORY"
+	},
+	"topUpAmount": 3000,
+	"item": {
+		"equipments": [
+			{
+				"catalogItemId": 2102,
+				"attributes": []
+			}
+		],
+		"charges": [
+			{
+				"catalogItemId": 2312,
+				"pricePlan": null,
+				"attributes": []
+			}
+		],
+		"usages": [],
+		"networks": [
+			{
+				"catalogItemId": 6,
+				"attributes": []
+			},
+			{
+				"catalogItemId": 9,
+				"attributes": []
+			},
+			{
+				"catalogItemId": 10,
+				"attributes": []
+			},
+			{
+				"catalogItemId": 8,
+				"attributes": []
+			},
+			{
+				"catalogItemId": 7,
+				"attributes": []
+			}
+		],
+		"addOns": [],
+		"discounts": []
+	}
+}

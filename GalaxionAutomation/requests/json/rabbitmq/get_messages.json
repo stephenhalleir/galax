@@ -1,0 +1,5 @@
+{
+    "count": 287,
+    "ackmode": "ack_requeue_true",
+    "encoding": "auto"
+}

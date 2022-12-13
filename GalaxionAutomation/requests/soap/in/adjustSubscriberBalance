@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <provv1:AdjustSubscriberBalanceRequest
+      xmlns:com="http://www.meteor.ie/SOA/1.0/Common"
+      xmlns:prodv1="http://www.meteor.ie/MID/Product/ProductOffering/ProductCatalog/v1" xmlns:provv1="http://www.meteor.ie/MeteorSOA_Provisioning/v1">
+      <com:serviceUser>
+        <com:user>METEOR</com:user>
+        <com:applicationDescriptor>OTHER</com:applicationDescriptor>
+        <com:applicationIdentifier>BILLING</com:applicationIdentifier>
+        <com:primaryPersonalIdentity>10001022</com:primaryPersonalIdentity>
+      </com:serviceUser>
+      <Msisdn>$msisdn</Msisdn>
+      <prodv1:SubscriberId>$subscriberId</prodv1:SubscriberId>
+      <provv1:AdjustmentParameters>
+        <com:keyValue>
+          <com:key>eventType</com:key>
+          <com:value>MONEY</com:value>
+        </com:keyValue>
+        <com:keyValue>
+          <com:key>balanceCategory</com:key>
+          <com:value>CASH</com:value>
+        </com:keyValue>
+        <com:keyValue>
+          <com:key>balance</com:key>
+          <com:value>$amount</com:value>
+        </com:keyValue>
+        <com:keyValue>
+          <com:key>adjustmentCode</com:key>
+          <com:value>1038</com:value>
+        </com:keyValue>
+        <com:keyValue>
+          <com:key>adjustmentName</com:key>
+          <com:value>ASSISTED_TOP_UP_ATM_FAILED</com:value>
+        </com:keyValue>
+      </provv1:AdjustmentParameters>
+    </provv1:AdjustSubscriberBalanceRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

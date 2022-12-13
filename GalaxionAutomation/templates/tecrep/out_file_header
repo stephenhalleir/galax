@@ -1,0 +1,27 @@
+*************************************
+*     HEADER DESCRIPTION   *
+*************************************
+Customer: METEOR MOBILE COMMUNICATIONS
+Quantity: $quantity
+Type: MULTISIM
+Batch: $batchNumber
+
+Address1: WAREHOUSE MANAGER
+Address2: Exertis Ireland Ltd
+Address3: M50 Business Park 
+Address4: Ballymount Road Upper
+Address5: Dublin 12
+Address6: Ireland
+Transport_Key: 010
+Artwork: EIR_BUSINESS
+SIM_Reference: MET PP013_LTE
+*
+****************************
+*    INPUT VARIABLES       *
+****************************
+Var_In: IMSI/ICCID/MSISDN
+****************************
+*    OUTPUT VARIABLES      *
+****************************
+Var_Out: Ki/PIN1/PUK1/PIN2/PUK2/ADM1
+***************************************

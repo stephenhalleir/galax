@@ -1,0 +1,9 @@
+{
+    "properties":
+    {
+        "delivery_mode":2
+    },
+    "routing_key":"$queue",
+    "payload":"$message",
+    "payload_encoding":"string"
+}

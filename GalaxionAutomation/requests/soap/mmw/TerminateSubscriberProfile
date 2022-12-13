@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Header/>
+  <SOAP-ENV:Body>
+    <ns17:TerminateSubscriberRequest
+      xmlns:ns10="http://www.meteor.ie/MID/CommonBusinessEntities/BaseTypes/Address/v1"
+      xmlns:ns11="http://www.meteor.ie/SOA/1.0/Common"
+      xmlns:ns12="http://www.meteor.ie/MID/Resource/LogicalResource/LogicalResource/v1"
+      xmlns:ns13="http://www.meteor.ie/SOA/1.0/MeteorDataModelIN/v1"
+      xmlns:ns14="http://www.meteor.ie/SOA/1.0/MeteorDataModelINQuery/v1"
+      xmlns:ns15="http://www.meteor.ie/MeteorDataModelOutreach/v1"
+      xmlns:ns17="http://www.meteor.ie/MeteorSOA_Provisioning/v1"
+      xmlns:ns18="http://www.meteor.ie/MID/Resource/ResourceSpecification/PhysicalResourceSpecification/v1"
+      xmlns:ns19="http://www.meteor.ie/MID/CommonBusinessEntities/Payment/Card/v1"
+      xmlns:ns2="http://www.meteor.ie/MID/CommonBusinessEntities/BaseTypes/BaseTypes/v1"
+      xmlns:ns20="http://www.meteor.ie/MID/CommonBusinessEntities/Party/Contact/v1"
+      xmlns:ns21="http://www.meteor.ie/MID/Resource/PhysicalResource/PhysicalResource/v1"
+      xmlns:ns22="http://www.meteor.ie/MID/Resource/PhysicalResource/Pack/v1"
+      xmlns:ns23="http://www.meteor.ie/MID/Product/ProductPrice/ProductPrice/v1"
+      xmlns:ns24="http://www.meteor.ie/Outreach/v1"
+      xmlns:ns3="http://www.meteor.ie/MID/Product/ProductOffering/ProductOfferingPrice/v1"
+      xmlns:ns4="http://www.meteor.ie/MID/Customer/Customer/v1"
+      xmlns:ns5="http://www.meteor.ie/MID/Customer/Customer/CustomerCreditProfile/v1"
+      xmlns:ns6="http://www.meteor.ie/MID/CommonBusinessEntities/Party/PartyRoles/v1"
+      xmlns:ns7="http://www.meteor.ie/MID/CommonBusinessEntities/MarketSaleDomain/SalesChannel/v1"
+      xmlns:ns8="http://www.meteor.ie/MID/Product/ProductOffering/ProductCatalog/v1" xmlns:ns9="http://www.meteor.ie/MID/CommonBusinessEntities/Party/Party/v1">
+      <ns11:serviceUser>
+        <ns11:user>EIR</ns11:user>
+        <ns11:applicationDescriptor>OTHER</ns11:applicationDescriptor>
+        <ns11:applicationIdentifier>PROVISIONING_FACADE</ns11:applicationIdentifier>
+        <ns11:primaryPersonalIdentity>ION</ns11:primaryPersonalIdentity>
+      </ns11:serviceUser>
+      <ns8:SubscriberId>$subscriberId</ns8:SubscriberId>
+      <Msisdn>$msisdn</Msisdn>
+      <ns17:EventContext>$eventContext</ns17:EventContext>
+      <ns17:CFServices>
+      </ns17:CFServices>
+    </ns17:TerminateSubscriberRequest>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

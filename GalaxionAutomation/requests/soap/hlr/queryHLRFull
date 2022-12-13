@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Header>
+    <cai3:SessionId xmlns:cai3="http://schemas.ericsson.com/cai3g1.2/">$sessionID</cai3:SessionId>
+  </soapenv:Header>
+  <soapenv:Body>
+    <cai3:Get xmlns:cai3="http://schemas.ericsson.com/cai3g1.2/">
+      <cai3:MOType>Subscription@http://schemas.ericsson.com/ema/UserProvisioning/GsmHlr/</cai3:MOType>
+      <cai3:MOId>
+        <cai3:msisdn>$msisdn</cai3:msisdn>
+      </cai3:MOId>
+    </cai3:Get>
+  </soapenv:Body>
+</soapenv:Envelope>

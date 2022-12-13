@@ -1,0 +1,30 @@
+{
+  "eventType": "SERVICE_FULFILLMENT_ADD_ITEM",
+  "eventSourceType": "BULK",
+  "eventTime": "$eventTime",
+  "event": {
+    "service": {
+      "subscriptionServiceId": "$serviceID",
+      "item": {
+        "addOns": [
+          {
+            "catalogItemId": "$addonID",
+            "charges": [
+              "$charge"
+            ],
+            "usages": [
+              {
+                "catalogItemId": "$usageID"
+              }
+            ],
+            "networks": [
+              {
+                "catalogItemId": "$networkElementID"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

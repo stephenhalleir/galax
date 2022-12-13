@@ -1,0 +1,130 @@
+<html>
+<head>
+<style>
+th {
+	padding: 20px;
+	text-align: center;
+	background: #1abc9c;
+	color: white;
+	font-size: 20px;
+}
+
+h1 {
+	padding: 10px;
+	text-align: center;
+	background: #3399ff;
+	color: white;
+	font-size: 20px;
+}
+
+
+
+td {
+	font-size: 10px;
+	border: 1px solid black;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px solid black;
+}
+
+.overall-header {
+	background: black;
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.table-heading {
+	color: black;
+	background: gainsboro;
+	font-size: 10px;
+}
+
+.barring-true {
+	background: #ff8080;
+}
+
+.barring-false {
+	background: gainsboro;
+}
+<
+link
+ 
+href
+="LegacyLookups/bootstrap
+.min
+.css
+"
+ 
+rel
+="stylesheet"
+>
+</style>
+</head>
+<body style="font-family: verdana;">
+	<!-- Main table -->
+	<table border="1" style="border_collapse: collapse">
+		<thead>
+			<tr>
+				<th colspan="2" class="overall-header">Mobile Network
+					Subscriber Lookup - $billingSource - $msisdn</th>
+			</tr>
+		</thead>
+		<tbody style="padding: 0px;">
+			<tr
+				style="background-color: lightgrey; font-size: 10px; font-weight: normal;">
+				<!--
+				 Main table - top row, left col -->
+				<td style="padding: 5px; font-weight: bold">
+					<div style="padding: 5px; font-weight: bold">MSISDN: $msisdn
+					</div>
+				</td>
+
+				<!-- Main table - top row, right col -->
+				<td>
+					<div style="padding: 5px; font-weight: bold">Retrieved:
+						$dateTime</div>
+				</td>
+			</tr>
+			<!-- Main table 2nd row -->
+			<tr>
+			
+				<!-- 2nd row, left col -->
+				<td valign="top">
+					<div>
+						<h1>HLR-FE</h1>
+					</div>$hlrfeProfile
+				</td>
+
+				<!-- 2nd row, right col -->
+				<td valign="top" height="100%">
+					<div>
+						<h1>SPR</h1>
+					</div>$sprProfile
+				</td>
+			</tr>
+
+			<!-- Main table 3rd row -->
+			<tr>
+				<!-- 3rd row, left col -->
+				<td valign="top">
+					<div>
+						<h1>OCS</h1>
+					</div>$ocsProfile
+				</td>
+
+				<!-- 3rd row, right col -->
+				<td valign="top">
+					<div>
+						<h1>Voicemail (CVM)</h1>
+					</div> $cvmProfile
+				</td>
+			</tr>
+			
+			
+		</tbody>
+	</table>
+</body>
+</html>

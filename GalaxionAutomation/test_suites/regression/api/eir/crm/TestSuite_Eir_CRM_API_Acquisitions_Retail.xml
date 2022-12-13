@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Eir CRM UI API - Retail Acquisitions Test Suite">
+	
+	<test thread-count="1" name="RetailAcquisitionTest" preserve-order="true">
+	<parameter name = "channel" value="EIR_RETAIL"/>
+		<classes>
+			<class name="testCases.eir.b2c.api.TestEirCrmAcquisitionsApi">
+				<methods>
+					<include name="testLogin" />
+					<include name="CRM_A_AQ_01_testCreateProspect" />
+					<include name="CRM_A_AQ_02_testAddOfferToCart" />
+					<include name="CRM_A_AQ_03_testGetCustomerDetails" />
+					<include name="CRM_A_AQ_04_testGetCartDetails" />
+					<include name="CRM_A_AQ_05_testGetAvailableOffers" />
+					<include name="CRM_A_AQ_06_testGetAvailableAddons" />
+					<include name="CRM_A_AQ_07_testAddAddonToOffer" />
+					<include name="CRM_A_AQ_08_testGetSimDetails" />
+					<include name="CRM_A_AQ_09_testUpdateNddOnOffer" />
+					<include name="CRM_A_AQ_10_testAddTopupToOffer" />
+					<include name="CRM_A_AQ_11_testAssignSIMToOrder" />
+					<include name="CRM_A_AQ_12_testSetOrderAsAnonymous" />
+					<include name="CRM_A_AQ_14_testAcceptTermsAndConditions" />
+					<include name="CRM_A_AQ_15_testValidateProspectRetail" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

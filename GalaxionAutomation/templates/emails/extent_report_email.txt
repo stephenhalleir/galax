@@ -1,0 +1,43 @@
+<html>
+	<body>
+		Hi,<br><br>
+
+		A test automation run has completed on environment $env.<br><br>
+		
+		<table border="1" style="border_collapse: collapse">
+			
+			<tr>
+				<td style="padding: 5px; font-weight: bold;background-color: #BDEDFF">Test suite:</td>
+				<td>$suiteName</td>
+			</tr>
+			
+			<tr>
+				<td style="padding: 5px; font-weight: bold;background-color: #BDEDFF">Start time:</td>
+				<td>$startTime</td>
+			</tr>
+			
+			<tr>
+				<td style="padding: 5px; font-weight: bold;background-color: #BDEDFF">End time:</td>
+				<td>$endTime</td>
+			</tr>
+			
+			<tr>
+				<td style="padding: 5px; font-weight: bold;vertical-align:top;background-color: #BDEDFF">Test Cases:</td>
+				<td>$tests</td>
+			</tr>
+			
+			<tr>
+				<td style="padding: 5px; font-weight: bold;vertical-align:top;background-color: #BDEDFF">Environment Snapshot:</td>
+				<td>$versions</td>
+			</tr>
+		</table>
+			
+			
+
+		
+		<br><br>
+		
+		Please find the results attached. Contact stephen.hall@eir.ie for any questions.
+		
+	</body>
+</html>

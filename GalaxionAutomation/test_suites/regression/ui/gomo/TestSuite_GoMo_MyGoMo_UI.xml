@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MyGoMo UI Test Suite">
+	<test thread-count="5" name="MyGoMo Self-care Test" preserve-order="true">
+		<classes>
+			<class name="testCases.gomo.ui.GoMoSelfCareTests">
+				<methods>
+					<include name="UI_MGO_A_LP_01_testLoginToMyGoMo" />
+					<include name="UI_MGO_A_LP_02_testForgottenEmail" />
+					<include name="UI_MGO_A_LP_03_testForgotPassword" />
+					<include name="UI_MGO_A_PR_01_testViewEditContactPreferences" />
+					<include name="UI_MGO_A_PR_02_testMyProfileDetailsDisplayed" />
+					<include name="UI_MGO_A_PR_03_testResetPassword" />
+					<include name="UI_MGO_A_PR_04_testChangeBothAddressesByEircode" />
+					<include name="UI_MGO_A_PR_05_testUpdateEmail" />
+					<include name="UI_MGO_A_PY_01_testAddNewCard" />
+					<include name="UI_MGO_A_PY_02_testMakeDefault" />
+					<include name="UI_MGO_A_PY_03_testEditExpiryDate" />
+					<include name="UI_MGO_A_PY_04_testRemoveCard" />
+					<include name="UI_MGO_A_PY_05_testAccountBalanceDisplayed" />
+					<include name="UI_MGO_A_PY_06_testMakePartialPayment" />
+					<include name="UI_MGO_A_PY_07_testViewTransactionHistory" />
+					<include name="UI_MGO_A_AD_01_testAccountDetailsDispay" />
+					<include name="UI_MGO_A_AD_02_testNDDSettings" />
+					<include name="UI_MGO_A_AD_03_testOrderReplacementSIM" />
+					<include name="UI_MGO_A_AD_04_testActivateReplacementSIM" />
+					<include name="UI_MGO_A_AD_05_testViewOrders" />
+					<include name="UI_MGO_A_NV_01_testNavigation" />
+					<include name="UI_MGO_A_NV_02_testFooterLinks" />
+					<include name="UI_MGO_A_NV_03_testHeaderLinks" />
+					<include name="UI_MGO_A_AL_01_testWebAlerts" />
+					<include name="UI_MGO_A_US_01_testViewUsage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

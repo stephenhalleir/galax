@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Eir CRM UI API - Customer Care Test Suite">
+	<test thread-count="5" name="Test" preserve-order="true">
+		<classes>
+			<class name="testCases.eir.b2c.api.TestEirCrmApi">
+				<methods>
+					<include name="testEirLogin" />
+					<include name="testGoMoLogin" />
+					<include name="CRM_A_SE_01_testSearchByMsisdn" />
+					<include name="CRM_A_SE_01_testSearchByBillingAccountID" />
+					<include name="CRM_A_AC_01_testGetKeycloakAccount" />
+					<include name="CRM_A_AC_02_testGetAccount" />
+					<include name="CRM_A_AC_03_testGetContacts" />
+					<include name="CRM_A_AC_04_testGetSubscriptions" />
+					<include name="CRM_A_AC_05_testGetContact" />
+					<include name="CRM_A_AC_06_testGetAccountBalance" />
+					<include name="CRM_A_AC_07_testGetServices" />
+					<include name="CRM_A_AC_08_testGetWebNotifications" />
+					<include name="CRM_A_PR_01_testGetContactPermissions" />
+					<include name="CRM_A_PR_02_testGetSecurityAnswer" />
+					<include name="CRM_A_PR_03_testGetContactPermissionsV1" />
+					<include name="CRM_A_PR_04_testGetRefSecurityQuestions" />
+					<include name="CRM_A_PR_05_testUpdateSecurityQuestion" />
+					<include name="CRM_A_PR_06_testEircodeLookup" />
+					<include name="CRM_A_PR_07_testUpdateBillingAddress" />
+					<include name="CRM_A_PR_08_testUpdateContactDetails" />
+					<include name="CRM_A_PR_10_testUpdateEmailAddress" />
+					<include name="CRM_A_PR_12_testAddAuthorizedUser" />
+					<include name="CRM_A_PR_13_testUpdateContactNumber" />
+					<include name="CRM_A_PR_14_testAddContactNumber" />
+					<include name="CRM_A_PR_15_testDeleteContactNumber" />
+					<include name="CRM_A_TR_01_testGetRefPostpayAdjustmentReasons" />
+					<include name="CRM_A_TR_02_testGetTransactionHistory" />
+					<include name="CRM_A_TR_03_testProcessAccountLevelAdjustment" />
+					<include name="CRM_A_CO_01_testGetCollectionsStatus" />
+					<include name="CRM_A_PM_01_testGetPaymentMethods" />
+					<include name="CRM_A_PM_02_testGetCreditScore" />
+					<include name="CRM_A_PM_03_testUpdateBillDeliveryType" />
+					<include name="CRM_A_CH_01_testGetCustomerHistory" />
+					<include name="CRM_A_CH_02_testGetFilteredCustomerHistory" />
+					<include name="CRM_A_DM_01_testGetDocumentNames" />
+					<include name="CRM_A_DM_02_testGetDocuments" />
+					<include name="CRM_A_OR_01_testGetOrderHistory" />
+					<include name="CRM_A_OR_02_testGetOrder" />
+					<include name="CRM_S_PD_01_testGetSubscription" />
+					<include name="CRM_S_PD_02_testGetServiceOffer" />
+					<include name="CRM_S_PD_03_testGetActiveAddons" />
+					<include name="CRM_S_PD_04_testGetBalance" />
+					<include name="CRM_S_PD_05_testUpdateNDDSetting" />
+					<include name="CRM_S_BA_01_testGetRefPrepayAdjustmentReasons" />
+					<include name="CRM_S_BA_02_testMakePrepayBalanceAdjustment" />
+					<include name="CRM_S_US_01_testGetRefRatingSubtotalTypes" />
+					<include name="CRM_S_US_02_testGetUsage" />
+					<include name="CRM_S_US_03_testGetUsageSummary" />
+					<include name="CRM_S_VO_01_testGetVoucherStatus" />
+					<include name="CRM_S_VO_02_testProcessTopup" />
+					<include name="CRM_S_MO_01_testAvailableAddons" />
+					<include name="CRM_S_BR_01_testGetBarrings" />
+					<include name="CRM_S_SR_02_testGetPendingSimReplacements" />
+					<include name="CRM_S_SR_03_testGetSimSwapEligibility" />
+					<include name="CRM_S_SR_04_testOrderReplacementSIM" />
+					<include name="CRM_S_SR_05_activateSimSwap" />
+					<include name="CRM_S_MS_01_testMsisdnSwap" />
+					<include name="CRM_S_TR_01_testGetTerminationRequests" />
+					<include name="CRM_S_TR_02_testGetRefTerminationReasons" />
+					<include name="CRM_S_CO_01_testGetChangeOfferEligibility" />
+					<include name="CRM_S_CO_02_testGetChangeOfferEarlyCeaseCharges" />
+					<include name="CRM_S_CO_03_testGetChangeOfferRefWaivingReasons" />
+					<include name="CRM_S_CO_01_testGetPortingTimes" />
+					<include name="CRM_S_PO_02_testGetCurrentOperator" />
+					<include name="CRM_S_PO_03_testGetPortHistory" />
+					<include name="CRM_S_PO_04_testGetIncompletePorts" />
+					<include name="CRM_S_DI_01_testGetRefDiscountAddReasons" />
+					<include name="CRM_S_DI_02_testGetRefDiscountRemoveReasons" />
+					<include name="CRM_S_DI_03_testGetActiveDiscounts" />
+					<include name="CRM_S_DI_04_testGetAvailableDiscounts" />
+					<include name="CRM_S_FE_01_testGetPausibleUsages" />
+					<include name="CRM_S_FE_02_testPauseFeature" />
+					<include name="CRM_S_FE_03_testUnpauseFeature" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

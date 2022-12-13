@@ -1,0 +1,26 @@
+package external_systems.mobile_network.enums;
+
+public enum NetworkSetting {
+	CSP,
+	SCHAR,
+	RSA,
+	CAT,
+	APN,
+	TARIFF_PLAN,
+	STATUS,
+	BILLING_SOURCE,
+	PRICE_PLAN,
+	SUBSCRIBER_TYPE,
+	OPERATOR,
+	CFSP,
+	AOC_OPTED_IN,
+	NOTIFICATION_FLAG,
+	LTE_ENABLED,
+	ECS_FLAG,
+	WIFI_CALLING,
+	BUNDLES,
+	DEDICATED_ACCOUNTS,
+	SN,
+	VM_TYPE,
+	VM_DESC,
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <met:CreateSubscriberProfileRequest xmlns:met="http://www.meteor.ie/SOA/1.0/MeteorDataModelSPR">
+      <met:serviceUser>
+        <met:user>METEOR</met:user>
+        <met:applicationDescriptor>AUTO_SH</met:applicationDescriptor>
+        <met:applicationIdentifier>AUTO_SH</met:applicationIdentifier>
+        <met:primaryPersonalIdentity>AUTO_SH</met:primaryPersonalIdentity>
+      </met:serviceUser>
+      <met:Msisdn>$msisdn</met:Msisdn>
+      <met:SubscriberId>$networkId</met:SubscriberId>
+      <met:SubscriberAccount>
+        <met:CustomerAccountId>ION_$networkId</met:CustomerAccountId>
+        <met:CustomerBillingCycleSpecName>Ion PAYG Dummy Cycle</met:CustomerBillingCycleSpecName>
+        <met:BillingDate></met:BillingDate>
+      </met:SubscriberAccount>
+      <met:SubscriberType>Prepaid</met:SubscriberType>
+      <met:Operator>Meteor</met:Operator>
+      <met:PricePlan>$pricePlan</met:PricePlan>
+      <met:CFSProfile>$cfsp</met:CFSProfile>
+      <met:IMSI>$imsi</met:IMSI>
+      <met:BillingSource>ION</met:BillingSource>
+      <met:LTE>1</met:LTE>
+      <met:ECS>0</met:ECS>
+    </met:CreateSubscriberProfileRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

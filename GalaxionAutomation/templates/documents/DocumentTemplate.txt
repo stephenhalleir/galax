@@ -1,0 +1,3 @@
+This $documentType document is generated for account $accountID.
+Generation date is $timestamp.
+File is auto generated and uploaded via the Galaxion Automation Framework.

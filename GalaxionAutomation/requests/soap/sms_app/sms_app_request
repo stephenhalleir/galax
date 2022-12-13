@@ -1,0 +1,17 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.meteor.ie/SOA/1.0/SMSUnitTest/v1" xmlns:com="http://www.meteor.ie/SOA/1.0/Common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:SMSMessageContextRequest>
+         <com:serviceUser>
+            <com:user>SOH</com:user>
+            <com:applicationDescriptor>SMS</com:applicationDescriptor>
+            <com:applicationIdentifier>SMS_Tests</com:applicationIdentifier>
+         </com:serviceUser>
+         <v1:SMSMessageContext>
+            <v1:shortcode>$shortcode</v1:shortcode>
+            <v1:msisdn>$msisdn</v1:msisdn>
+            <v1:inputMessage>$message</v1:inputMessage>
+         </v1:SMSMessageContext>
+      </v1:SMSMessageContextRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

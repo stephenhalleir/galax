@@ -1,0 +1,157 @@
+{
+   "eventType":"CREATE_PRODUCT_ORDER",
+   "eventTime":"$eventTime",
+   "event":{
+      "productOrder":{
+         "orderType":"ACQUISITION",
+         "prospectUuid":"$uuid",
+         "reference":"$orderNumber",
+         "channel":{
+            "channelName":"RETAIL",
+            "brand":"EIR",
+            "channelType":"DIRECT"
+         },
+         "customer":{
+            
+         },
+         "securityQuestion":null,
+         "orderPayment":null,
+         "offers":[
+            {
+               "catalogOfferId":2002,
+               "offerType":"PREPAY",
+               "domain":"MOBILE",
+               "service":{
+                  "serviceName":null,
+                  "orderServiceStatus":"INITIAL",
+                  "port":null,
+                  "directoryPreference":"EXDIRECTORY"
+               },
+               "topUpAmount":"$topupAmount",
+               "item":{
+                  "equipments":[
+                     {
+                        "catalogItemId":2103,
+                        "attributes":[
+                           {
+                              "dynamicAttributeId":3,
+                              "name":"ICCID",
+                              "type":"GENERIC_STRING",
+                              "values":[
+                                 {
+                                    "stringValue":"$iccid",
+                                    "longValue":null,
+                                    "booleanValue":null,
+                                    "dateTimeValue":null
+                                 }
+                              ]
+                           },
+                           {
+                              "dynamicAttributeId":1,
+                              "name":"MSISDN",
+                              "type":"GENERIC_STRING",
+                              "values":[
+                                 {
+                                    "stringValue":"$msisdn",
+                                    "longValue":null,
+                                    "booleanValue":null,
+                                    "dateTimeValue":null
+                                 }
+                              ]
+                           },
+                           {
+                              "dynamicAttributeId":2,
+                              "name":"IMSI",
+                              "type":"GENERIC_STRING",
+                              "values":[
+                                 {
+                                    "stringValue":"$imsi",
+                                    "longValue":null,
+                                    "booleanValue":null,
+                                    "dateTimeValue":null
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  ],
+                  "charges":[
+                     
+                  ],
+                  "usages":[
+                     
+                  ],
+                  "networks":[
+                     {
+                        "catalogItemId":8,
+                        "attributes":[
+                           
+                        ]
+                     },
+                     {
+                        "catalogItemId":10,
+                        "attributes":[
+                           
+                        ]
+                     },
+                     {
+                        "catalogItemId":9,
+                        "attributes":[
+                           
+                        ]
+                     },
+                     {
+                        "catalogItemId":7,
+                        "attributes":[
+                           
+                        ]
+                     },
+                     {
+                        "catalogItemId":6,
+                        "attributes":[
+                           
+                        ]
+                     }
+                  ],
+                  "addOns":[
+                     {
+                        "catalogItemId":"$addOnCatalogItemId",
+                        "equipments":[
+                           
+                        ],
+                        "charges":[
+                           {
+                              "catalogItemId":"$chargeItemId",
+                              "pricePlan":{
+                                 "catalogItemId":"$pricePlansId",
+                                 "price":"$addonPrice"
+                              },
+                              "attributes":[
+                                 
+                              ]
+                           }
+                        ],
+                        "usages":[
+                           "$usages"
+                        ],
+                        "networks":[
+                           {
+                              "catalogItemId":"$networkItemID",
+                              "attributes":[
+                                 
+                              ]
+                           }
+                        ]
+                     }
+                  ],
+                  "discounts":[
+                     
+                  ]
+               }
+            }
+         ],
+         "hasAgreedTermsAndConditions":true,
+         "isAnonymous":true
+      }
+   }
+}

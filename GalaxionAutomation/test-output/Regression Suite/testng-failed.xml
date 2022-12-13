@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression Suite]">
+  <test name="E2E Order Tests(failed)">
+    <classes>
+      <class name="uiTests.CustomerActionsTests">
+        <methods>
+          <include name="completeMultilineAccountSetUp"/>
+          <include name="completeSinglelineAccountSetUp"/>
+          <include name="afterSuite"/>
+          <include name="setUpSuite"/>
+          <include name="setUpMethod"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- uiTests.CustomerActionsTests -->
+      <class name="uiTests.E2eOrder">
+        <methods>
+          <include name="placeMultilineOrder" invocation-numbers="0"/>
+          <include name="closeDriver"/>
+          <include name="placeCrossSellOrder"/>
+          <include name="afterSuite"/>
+          <include name="setUpSuite"/>
+          <include name="setUpMethod"/>
+          <include name="startDriver"/>
+          <include name="placeSinglelineOrder"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- uiTests.E2eOrder -->
+      <class name="uiTests.ProcessLogistics">
+        <methods>
+          <include name="provisioningCheckCrossSell"/>
+          <include name="processCrossSellLogistics"/>
+          <include name="startDriver"/>
+          <include name="provisioningCheckSingleline"/>
+          <include name="afterSuite"/>
+          <include name="setUpSuite"/>
+          <include name="provisioningCheckMultiline"/>
+          <include name="processMultilineLogistics"/>
+          <include name="setUpMethod"/>
+          <include name="processSinglelineLogistics"/>
+          <include name="closeDriver"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- uiTests.ProcessLogistics -->
+    </classes>
+  </test> <!-- E2E Order Tests(failed) -->
+</suite> <!-- Failed suite [Regression Suite] -->

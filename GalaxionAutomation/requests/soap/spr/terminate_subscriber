@@ -1,0 +1,14 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:met="http://www.meteor.ie/SOA/1.0/MeteorDataModelSPR">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <met:TerminateSubscriberRequest>
+         <met:serviceUser>
+            <met:user>?</met:user>
+            <met:applicationDescriptor>?</met:applicationDescriptor>
+            <met:applicationIdentifier>?</met:applicationIdentifier>
+         </met:serviceUser>
+         <met:SubscriberId>$subscriberId</met:SubscriberId>
+         <met:BillingSource>$billingSource</met:BillingSource>
+      </met:TerminateSubscriberRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

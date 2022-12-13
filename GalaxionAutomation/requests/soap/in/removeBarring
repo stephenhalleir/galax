@@ -1,0 +1,47 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Header/>
+  <SOAP-ENV:Body>
+    <ns13:RemoveNetworkServiceRequest
+      xmlns:ns10="http://www.meteor.ie/MID/CommonBusinessEntities/BaseTypes/Address/v1"
+      xmlns:ns11="http://www.meteor.ie/SOA/1.0/Common"
+      xmlns:ns13="http://www.meteor.ie/MeteorSOA_Provisioning/v1"
+      xmlns:ns14="http://www.meteor.ie/MID/CommonBusinessEntities/Payment/Card/v1"
+      xmlns:ns15="http://www.meteor.ie/MID/CommonBusinessEntities/Party/Contact/v1"
+      xmlns:ns16="http://www.meteor.ie/MID/Resource/ResourceSpecification/PhysicalResourceSpecification/v1"
+      xmlns:ns17="http://www.meteor.ie/MID/Resource/PhysicalResource/PhysicalResource/v1"
+      xmlns:ns18="http://www.meteor.ie/MID/Resource/LogicalResource/LogicalResource/v1"
+      xmlns:ns19="http://www.meteor.ie/MID/Resource/PhysicalResource/Pack/v1"
+      xmlns:ns2="http://www.meteor.ie/MID/Customer/Customer/v1"
+      xmlns:ns20="http://www.meteor.ie/MID/Product/ProductPrice/ProductPrice/v1"
+      xmlns:ns3="http://www.meteor.ie/MID/Customer/Customer/CustomerCreditProfile/v1"
+      xmlns:ns4="http://www.meteor.ie/MID/CommonBusinessEntities/Party/PartyRoles/v1"
+      xmlns:ns5="http://www.meteor.ie/MID/CommonBusinessEntities/MarketSaleDomain/SalesChannel/v1"
+      xmlns:ns6="http://www.meteor.ie/MID/Product/ProductOffering/ProductCatalog/v1"
+      xmlns:ns7="http://www.meteor.ie/MID/CommonBusinessEntities/BaseTypes/BaseTypes/v1"
+      xmlns:ns8="http://www.meteor.ie/MID/Product/ProductOffering/ProductOfferingPrice/v1" xmlns:ns9="http://www.meteor.ie/MID/CommonBusinessEntities/Party/Party/v1">
+      <ns11:serviceUser>
+        <ns11:user>EIR</ns11:user>
+        <ns11:applicationDescriptor>SH</ns11:applicationDescriptor>
+        <ns11:applicationIdentifier>SH</ns11:applicationIdentifier>
+        <ns11:primaryPersonalIdentity>SH</ns11:primaryPersonalIdentity>
+      </ns11:serviceUser>
+      <Msisdn>$msisdn</Msisdn>
+      <ns6:SubscriberId>$subscriberId</ns6:SubscriberId>
+      <ns13:EventContext>ION:2374-0</ns13:EventContext>
+ 		<ns13:CFService>
+            <ns13:ServiceCategory>Barring</ns13:ServiceCategory>
+            <ServiceID>General Bar Service</ServiceID>
+             <ns13:ServiceParameters>
+               <!--1 or more repetitions:-->
+               <ns11:keyValue>
+                  <ns11:key>type</ns11:key>
+                  <ns11:value>$barType</ns11:value>
+               </ns11:keyValue>
+            </ns13:ServiceParameters>
+         </ns13:CFService>
+      <ns13:CFServices>
+      </ns13:CFServices>
+      <ns13:NotificationSent>false</ns13:NotificationSent>
+    </ns13:RemoveNetworkServiceRequest>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,27 @@
+{
+   "eventType":"CREATE_HARDWARE_FUND_ORDER",
+   "eventTime":"$eventTime",
+   "event":{
+      "hardwareFundOrder":{
+         "orderType":"CROSS_SELL",
+         "reference":"$reference",
+         "channel":{
+            "brand":"EIR",
+            "channelName":"TELESALES",
+            "channelType":"INDIRECT"
+         },
+         "hardwareFund":{
+            "id":null,
+            "amount":"$amount",
+            "term":12,
+            "comment":"$comment"
+         },
+         "user":{
+            "name":"liam.mooney+612@eir.ie"
+         },
+         "existingAccount":{
+            "subscriptionAccountId":"$subscriptionAccountID"
+         }
+      }
+   }
+}

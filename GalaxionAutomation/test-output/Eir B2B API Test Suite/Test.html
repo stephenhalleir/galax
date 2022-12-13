@@ -1,0 +1,2217 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/72</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Apr 25 14:38:14 BST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>11 seconds (11302 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.testLogin()'><b>testLogin</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B CRM UI API: Authenticate</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected content-type &quot;JSON&quot; doesn&apos;t match actual content-type &quot;text/html; charset=utf-8&quot;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.contentType(ResponseSpecificationImpl.groovy:421)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.contentType(ValidatableResponseOptionsImpl.java:220)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$contentType(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.contentType(ValidatableResponseImpl.groovy:278)
+	at io.restassured.internal.ValidatableResponseImpl.contentType(ValidatableResponseImpl.groovy)
+	at microservices.backend.keycloak.api.KeycloakAPI.getToken(KeycloakAPI.java:39)
+	at microservices.backend.keycloak.utilities.KeycloakUtil.getToken(KeycloakUtil.java:38)
+	at microservices.backend.keycloak.utilities.KeycloakUtil.getPrivateAuthToken(KeycloakUtil.java:91)
+	at microservices.frontend.eir_b2b_crm_ui_frontend.B2BCRMAPI.getToken(B2BCRMAPI.java:60)
+	at testCases.eir.b2b.api.TestB2BCrmApi.testLogin(TestB2BCrmApi.java:135)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 42 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1948835427", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1948835427'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected content-type &quot;JSON&quot; doesn&apos;t match actual content-type &quot;text/html; charset=utf-8&quot;.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.contentType(ResponseSpecificationImpl.groovy:421)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.contentType(ValidatableResponseOptionsImpl.java:220)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$contentType(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.contentType(ValidatableResponseImpl.groovy:278)
+	at io.restassured.internal.ValidatableResponseImpl.contentType(ValidatableResponseImpl.groovy)
+	at microservices.backend.keycloak.api.KeycloakAPI.getToken(KeycloakAPI.java:39)
+	at microservices.backend.keycloak.utilities.KeycloakUtil.getToken(KeycloakUtil.java:38)
+	at microservices.backend.keycloak.utilities.KeycloakUtil.getPrivateAuthToken(KeycloakUtil.java:91)
+	at microservices.frontend.eir_b2b_crm_ui_frontend.B2BCRMAPI.getToken(B2BCRMAPI.java:60)
+	at testCases.eir.b2b.api.TestB2BCrmApi.testLogin(TestB2BCrmApi.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_AO_01_testGetActiveAccountLevelAddons()'><b>B2B_A_AO_01_testGetActiveAccountLevelAddons</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_AO_01: B2B CRM UI API: Get active account level addons</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_AO_01_testGetActiveAccountLevelAddons(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace393481646", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace393481646'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_AO_01_testGetActiveAccountLevelAddons(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_AO_02_testGetAvailableAccountLevelAddons()'><b>B2B_A_AO_02_testGetAvailableAccountLevelAddons</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_AO_02: B2B CRM UI API: Get available account level addons</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_AO_02_testGetAvailableAccountLevelAddons(microservices.backend.eir_catalog_core_backend.enums.B2BAccountType, org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace878506901", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace878506901'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_AO_02_testGetAvailableAccountLevelAddons(microservices.backend.eir_catalog_core_backend.enums.B2BAccountType, org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_BR_01_testAddAccountLevelBarring()'><b>B2B_A_BR_01_testAddAccountLevelBarring</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_BR_01: B2B CRM UI API: Add account level barring</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_BR_01_testAddAccountLevelBarring(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace897801829", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace897801829'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_BR_01_testAddAccountLevelBarring(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_BR_02_testRemoveAccountLevelBarring()'><b>B2B_A_BR_02_testRemoveAccountLevelBarring</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_BR_02: B2B CRM UI API: Remove account level barring</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_BR_02_testRemoveAccountLevelBarring(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2049121789", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2049121789'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_BR_02_testRemoveAccountLevelBarring(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CA_01_testGetRefMarketSegments()'><b>B2B_A_CA_01_testGetRefMarketSegments</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CA_01: B2B CRM UI API: Get ref market segments</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CA_01_testGetRefMarketSegments(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace167692593", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace167692593'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CA_01_testGetRefMarketSegments(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CA_02_testGetRefBillCycles()'><b>B2B_A_CA_02_testGetRefBillCycles</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CA_02: B2B CRM UI API: Get ref bill cycles</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CA_02_testGetRefBillCycles(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace990226843", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace990226843'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CA_02_testGetRefBillCycles(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CA_03_testGenerateNewOrderNumber()'><b>B2B_A_CA_03_testGenerateNewOrderNumber</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CA_03: B2B CRM UI API: Generate new order number</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CA_03_testGenerateNewOrderNumber(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace450420562", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace450420562'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CA_03_testGenerateNewOrderNumber(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CH_01_testGetCustomerHistoryFilters()'><b>B2B_A_CH_01_testGetCustomerHistoryFilters</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CH_01: B2B CRM UI API: Get customer history filters</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_01_testGetCustomerHistoryFilters(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1860754643", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1860754643'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_01_testGetCustomerHistoryFilters(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CH_02_testGetCustomerHistory()'><b>B2B_A_CH_02_testGetCustomerHistory</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CH_02: B2B CRM UI API: Get customer history</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_02_testGetCustomerHistory(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1558133170", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1558133170'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_02_testGetCustomerHistory(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CH_03_testAddNote()'><b>B2B_A_CH_03_testAddNote</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CH_03: B2B CRM UI API: Add a note</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_03_testAddNote(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1020632821", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1020632821'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_03_testAddNote(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CH_04_testGetCustomerHistoryItem()'><b>B2B_A_CH_04_testGetCustomerHistoryItem</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CH_04: B2B CRM UI API: Get customer history item</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_04_testGetCustomerHistoryItem(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace369573800", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace369573800'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_04_testGetCustomerHistoryItem(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CH_05_testGetEmailNotificationSubjects()'><b>B2B_A_CH_05_testGetEmailNotificationSubjects</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CH_05: B2B CRM UI API: Get email notification subjects</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_05_testGetEmailNotificationSubjects(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace217827560", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace217827560'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_05_testGetEmailNotificationSubjects(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CH_06_testGetEmailNotifications()'><b>B2B_A_CH_06_testGetEmailNotifications</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CH_06: B2B CRM UI API: Get email notifications</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_06_testGetEmailNotifications(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace348084146", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace348084146'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_06_testGetEmailNotifications(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CH_07_testGetSmsNotifications()'><b>B2B_A_CH_07_testGetSmsNotifications</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CH_07: B2B CRM UI API: Get SMS notifications</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_07_testGetSmsNotifications(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace339186291", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace339186291'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CH_07_testGetSmsNotifications(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CO_01_testGetAccountContacts()'><b>B2B_A_CO_01_testGetAccountContacts</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CO_01_B2B CRM UI API: Get account contacts</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CO_01_testGetAccountContacts()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1876259196", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1876259196'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CO_01_testGetAccountContacts()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CO_02_testGetRefContactTypes()'><b>B2B_A_CO_02_testGetRefContactTypes</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CO_02: B2B CRM UI API: Get ref contact types</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CO_02_testGetRefContactTypes()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1299661385", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1299661385'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CO_02_testGetRefContactTypes()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CO_03_testGetAllContacts()'><b>B2B_A_CO_03_testGetAllContacts</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CO_03: B2B CRM UI API: Get all contacts</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CO_03_testGetAllContacts()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1403815002", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1403815002'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CO_03_testGetAllContacts()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CO_06_testAddContact()'><b>B2B_A_CO_06_testAddContact</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CO_06: B2B CRM UI API: Add a new contact</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CO_06_testAddContact(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace648303898", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace648303898'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CO_06_testAddContact(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CO_07_testUpdateContactType()'><b>B2B_A_CO_07_testUpdateContactType</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CO_07: B2B CRM UI API: Update contact type</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CO_07_testUpdateContactType(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace876881599", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace876881599'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CO_07_testUpdateContactType(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CO_08_testEircodeLookup()'><b>B2B_A_CO_08_testEircodeLookup</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CO_08: B2B CRM UI API: Eircode lookup</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CO_08_testEircodeLookup(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1343835789", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1343835789'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CO_08_testEircodeLookup(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CS_01_testGetOffersForAccountType()'><b>B2B_A_CS_01_testGetOffersForAccountType</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CS_01: B2B CRM UI API: Get offers for customer type</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CS_01_testGetOffersForAccountType(microservices.backend.eir_catalog_core_backend.enums.B2BAccountType, org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace66231846", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace66231846'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CS_01_testGetOffersForAccountType(microservices.backend.eir_catalog_core_backend.enums.B2BAccountType, org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CS_02_testGetTariffPlansForOfferCode()'><b>B2B_A_CS_02_testGetTariffPlansForOfferCode</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CS_02: B2B CRM UI API: Get tariff plans for offer</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CS_02_testGetTariffPlansForOfferCode(microservices.backend.eir_catalog_core_backend.data_model.TariffPlan, org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1133730108", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1133730108'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CS_02_testGetTariffPlansForOfferCode(microservices.backend.eir_catalog_core_backend.data_model.TariffPlan, org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_CS_03_testGetAddonsForCorporateOffer()'><b>B2B_A_CS_03_testGetAddonsForCorporateOffer</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_CS_03: B2B CRM UI API: Get available addons for Corporate offer</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CS_03_testGetAddonsForCorporateOffer(microservices.backend.eir_catalog_core_backend.data_model.TariffPlan, org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace651698411", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace651698411'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_CS_03_testGetAddonsForCorporateOffer(microservices.backend.eir_catalog_core_backend.data_model.TariffPlan, org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_DO_01_testGetDocuments()'><b>B2B_A_DO_01_testGetDocuments</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_DO_01: B2B CRM UI API: Get documents</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_DO_01_testGetDocuments()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1628305283", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1628305283'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_DO_01_testGetDocuments()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_DO_02_testGetRefDocumentTypes()'><b>B2B_A_DO_02_testGetRefDocumentTypes</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_DO_02: B2B CRM UI API: Get ref document types</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_DO_02_testGetRefDocumentTypes()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace727119352", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace727119352'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_DO_02_testGetRefDocumentTypes()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_DO_03_testUploadDocument()'><b>B2B_A_DO_03_testUploadDocument</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_DO_03: B2B CRM UI API: Upload document</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_DO_03_testUploadDocument(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2003305136", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2003305136'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_DO_03_testUploadDocument(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_DO_04_testDeleteDocument()'><b>B2B_A_DO_04_testDeleteDocument</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_DO_04: B2B CRM UI API: Delete document</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_DO_04_testDeleteDocument(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace447320069", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace447320069'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_DO_04_testDeleteDocument(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_EQ_01_testGetAvailableHandsets()'><b>B2B_A_EQ_01_testGetAvailableHandsets</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_EQ_01: B2B CRM UI API: Get available handsets</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_EQ_01_testGetAvailableHandsets(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1013620810", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1013620810'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_EQ_01_testGetAvailableHandsets(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_EQ_02_testGetAvailableHandsetsAndDongles()'><b>B2B_A_EQ_02_testGetAvailableHandsetsAndDongles</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_EQ_02: B2B CRM UI API: Get available handsets & dongles</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_EQ_02_testGetAvailableHandsetsAndDongles(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1900307803", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1900307803'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_EQ_02_testGetAvailableHandsetsAndDongles(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_GE_01_testGetAccountHierarchy()'><b>B2B_A_GE_01_testGetAccountHierarchy</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_GE_01: B2B CRM UI API: Get account hierarchy</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_01_testGetAccountHierarchy(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1333945918", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1333945918'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_01_testGetAccountHierarchy(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_GE_02_testGetAccountDetails()'><b>B2B_A_GE_02_testGetAccountDetails</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_GE_02: B2B CRM UI API: Get account details</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_02_testGetAccountDetails(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1372668833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1372668833'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_02_testGetAccountDetails(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_GE_03_testMakeAccountUnbillable()'><b>B2B_A_GE_03_testMakeAccountUnbillable</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_GE_03: B2B CRM UI API: Make account unbillable</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_03_testMakeAccountUnbillable(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1179093020", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1179093020'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_03_testMakeAccountUnbillable(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_GE_05_testUpdateAccountGeneralDetails()'><b>B2B_A_GE_05_testUpdateAccountGeneralDetails</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_GE_05: B2B CRM UI API: Update account general details (attributes)</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_05_testUpdateAccountGeneralDetails(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace899376395", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace899376395'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_05_testUpdateAccountGeneralDetails(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_GE_06_testUpdateCompanyDetails()'><b>B2B_A_GE_06_testUpdateCompanyDetails</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_GE_06: B2B CRM UI API: Update company details</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_06_testUpdateCompanyDetails(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace275150920", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace275150920'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_06_testUpdateCompanyDetails(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_GE_07_testDeviceEnrollments()'><b>B2B_A_GE_07_testDeviceEnrollments</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_GE_07: B2B CRM UI API: Update device enrollments</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_07_testDeviceEnrollments(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2009591182", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2009591182'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_07_testDeviceEnrollments(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_GE_08_testUpdateTaxDetails()'><b>B2B_A_GE_08_testUpdateTaxDetails</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_GE_08: B2B CRM UI API: Update tax details</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_08_testUpdateTaxDetails(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1723518396", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1723518396'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_GE_08_testUpdateTaxDetails(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_HW_01_testGetHardwareFund()'><b>B2B_A_HW_01_testGetHardwareFund</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_HW_01: B2B CRM UI API: Get hardware fund</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_HW_01_testGetHardwareFund()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1634411546", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1634411546'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_HW_01_testGetHardwareFund()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_HW_02_testGetHardwareFundAdjustmentReasons()'><b>B2B_A_HW_02_testGetHardwareFundAdjustmentReasons</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_HW_02: B2B CRM UI API: Get hardware fund adjustment reasons</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_HW_02_testGetHardwareFundAdjustmentReasons()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace523794808", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace523794808'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_HW_02_testGetHardwareFundAdjustmentReasons()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_OR_01_testGetOrderHistory()'><b>B2B_A_OR_01_testGetOrderHistory</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_OR_01: B2B CRM UI API: Get order history</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_OR_01_testGetOrderHistory()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace534662976", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace534662976'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_OR_01_testGetOrderHistory()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_OR_02_testGetFilteredOrderHistory()'><b>B2B_A_OR_02_testGetFilteredOrderHistory</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_OR_02: B2B CRM UI API: Get filtered order history</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_OR_02_testGetFilteredOrderHistory(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace727818265", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace727818265'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_OR_02_testGetFilteredOrderHistory(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_OR_03_testGetOrder()'><b>B2B_A_OR_03_testGetOrder</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_OR_03: B2B CRM UI API: Get order</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_OR_03_testGetOrder(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2095702106", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2095702106'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_OR_03_testGetOrder(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_PY_01_testGetPaymentMethods()'><b>B2B_A_PY_01_testGetPaymentMethods</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_PY_01: B2B CRM UI API: Get payment methods</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_01_testGetPaymentMethods(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1678623942", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1678623942'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_01_testGetPaymentMethods(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_PY_02_testUpdateBillingDetails()'><b>B2B_A_PY_02_testUpdateBillingDetails</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_PY_02: B2B CRM UI API: Update billing details</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_02_testUpdateBillingDetails(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2075352262", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2075352262'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_02_testUpdateBillingDetails(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_PY_03_testUpdatePaymentTerm()'><b>B2B_A_PY_03_testUpdatePaymentTerm</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_PY_03: B2B CRM UI API: Update payment term</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_03_testUpdatePaymentTerm(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace706604026", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace706604026'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_03_testUpdatePaymentTerm(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_PY_04_testValidateIban()'><b>B2B_A_PY_04_testValidateIban</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_PY_04: B2B CRM UI API: Validate IBAN</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_04_testValidateIban(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace627746290", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace627746290'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_04_testValidateIban(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_PY_05_testAddSepaPaymentMethod()'><b>B2B_A_PY_05_testAddSepaPaymentMethod</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_PY_05: B2B CRM UI API: Add SEPA payment method</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_05_testAddSepaPaymentMethod(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace555136651", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace555136651'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_05_testAddSepaPaymentMethod(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_PY_06_testUpdateDefaultPaymentMethod()'><b>B2B_A_PY_06_testUpdateDefaultPaymentMethod</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_PY_06: B2B CRM UI API: Change default SEPA payment method</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_06_testUpdateDefaultPaymentMethod(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace891175246", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace891175246'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_06_testUpdateDefaultPaymentMethod(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_PY_07_testDeleteSepaPaymentMethod()'><b>B2B_A_PY_07_testDeleteSepaPaymentMethod</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_PY_07: B2B CRM UI API: Delete SEPA payment method</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_07_testDeleteSepaPaymentMethod(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1359603919", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1359603919'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_PY_07_testDeleteSepaPaymentMethod(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_SE_01_testSearchByBillingAccountID()'><b>B2B_A_SE_01_testSearchByBillingAccountID</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_SE_01: B2B CRM UI API: Search by billing account ID</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_SE_01_testSearchByBillingAccountID(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1045397707", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1045397707'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_SE_01_testSearchByBillingAccountID(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_SE_01_testSearchByMSISDN()'><b>B2B_A_SE_01_testSearchByMSISDN</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_SE_01: B2B CRM UI API: Search by MSISDN</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_SE_01_testSearchByMSISDN(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace380494131", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace380494131'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_SE_01_testSearchByMSISDN(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_SE_01_testSearchByName()'><b>B2B_A_SE_01_testSearchByName</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_SE_01: B2B CRM UI API: Search by account name</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_SE_01_testSearchByName(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace158460163", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace158460163'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_SE_01_testSearchByName(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_SE_02_testOrderSearch()'><b>B2B_A_SE_02_testOrderSearch</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_SE_02: B2B CRM UI API: Order search</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_SE_02_testOrderSearch(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace208301085", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace208301085'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_SE_02_testOrderSearch(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_SU_01_testGetSubscriptions()'><b>B2B_A_SU_01_testGetSubscriptions</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_SU_01: B2B CRM UI API: Get subscriptions</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_SU_01_testGetSubscriptions()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace688581408", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace688581408'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_SU_01_testGetSubscriptions()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_SU_02_testGetSimDetails()'><b>B2B_A_SU_02_testGetSimDetails</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_SU_02: B2B CRM UI API: Get SIM details</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_SU_02_testGetSimDetails()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1775897362", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1775897362'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_SU_02_testGetSimDetails()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_TR_01_testGetTransactionHistory()'><b>B2B_A_TR_01_testGetTransactionHistory</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_TR_01: B2B CRM UI API: Get transaction history</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_TR_01_testGetTransactionHistory()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1145165159", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1145165159'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_TR_01_testGetTransactionHistory()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_TR_02_testGetAdjustmentReasons()'><b>B2B_A_TR_02_testGetAdjustmentReasons</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_TR_02: B2B CRM UI API: Get ref adjustment reasons</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_TR_02_testGetAdjustmentReasons(microservices.backend.eir_catalog_core_backend.enums.B2BAccountType, org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1656318404", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1656318404'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_TR_02_testGetAdjustmentReasons(microservices.backend.eir_catalog_core_backend.enums.B2BAccountType, org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_A_TR_03_testGetAdjustment()'><b>B2B_A_TR_03_testGetAdjustment</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_A_TR_03: B2B CRM UI API: Get adjustment details</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_TR_03_testGetAdjustment(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1206678562", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1206678562'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_A_TR_03_testGetAdjustment(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_AO_01_testGetAvailableServiceLevelAddons()'><b>B2B_S_AO_01_testGetAvailableServiceLevelAddons</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_AO_01_B2B CRM UI API: Get available service level addons</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_AO_01_testGetAvailableServiceLevelAddons(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1740095856", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1740095856'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_AO_01_testGetAvailableServiceLevelAddons(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_AO_02_testGetActiveServiceLevelAddons()'><b>B2B_S_AO_02_testGetActiveServiceLevelAddons</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_AO_02: B2B CRM UI API: Get active service level addons</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_AO_02_testGetActiveServiceLevelAddons(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace143251944", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace143251944'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_AO_02_testGetActiveServiceLevelAddons(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_BR_01_testGetBarrings()'><b>B2B_S_BR_01_testGetBarrings</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_BR_01: B2B CRM UI API: Get barrings</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_BR_01_testGetBarrings(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace195253450", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace195253450'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_BR_01_testGetBarrings(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_CH_01_testGetAvailableOffersForChangeOffer()'><b>B2B_S_CH_01_testGetAvailableOffersForChangeOffer</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_CH_01: B2B CRM UI API: Get available offers for change offer</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_CH_01_testGetAvailableOffersForChangeOffer(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace181372317", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace181372317'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_CH_01_testGetAvailableOffersForChangeOffer(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_CH_01_testGetPendingTerminationRequests()'><b>B2B_S_CH_01_testGetPendingTerminationRequests</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_CH_01: B2B CRM UI API: Get pending termination requests</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_CH_01_testGetPendingTerminationRequests(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1016090398", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1016090398'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_CH_01_testGetPendingTerminationRequests(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_CH_02_testGetChangeOfferEligibility()'><b>B2B_S_CH_02_testGetChangeOfferEligibility</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_CH_02: B2B CRM UI API: Get change offer requests</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_CH_02_testGetChangeOfferEligibility(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2095573052", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2095573052'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_CH_02_testGetChangeOfferEligibility(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_GE_01_testGetSubscription()'><b>B2B_S_GE_01_testGetSubscription</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_GE_01: B2B CRM UI API: Get subscription</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_GE_01_testGetSubscription()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1497983329", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1497983329'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_GE_01_testGetSubscription()[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_MS_01_testGetNextMSISDN()'><b>B2B_S_MS_01_testGetNextMSISDN</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_MS_01: B2B CRM UI API: Get next available MSISDN</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_MS_01_testGetNextMSISDN(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2097989776", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2097989776'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_MS_01_testGetNextMSISDN(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_MS_02_testSwapMSISDN()'><b>B2B_S_MS_02_testSwapMSISDN</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_MS_02: B2B CRM UI API: Swap MSISDN</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_MS_02_testSwapMSISDN(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1609960076", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1609960076'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_MS_02_testSwapMSISDN(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_PO_01_testGetPortingTimes()'><b>B2B_S_PO_01_testGetPortingTimes</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_PO_01: B2B CRM UI API: Get porting times</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_PO_01_testGetPortingTimes(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace223783590", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace223783590'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_PO_01_testGetPortingTimes(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_PO_02_testGetPortingHistory()'><b>B2B_S_PO_02_testGetPortingHistory</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_PO_02: B2B CRM UI API: Get porting history</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_PO_02_testGetPortingHistory(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1470400901", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1470400901'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_PO_02_testGetPortingHistory(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_PO_03_testGetIncompletePorts()'><b>B2B_S_PO_03_testGetIncompletePorts</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_PO_03: B2B CRM UI API: Get incomplete ports</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_PO_03_testGetIncompletePorts(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace957414929", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace957414929'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_PO_03_testGetIncompletePorts(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_US_01_testGetRefUsageTypes()'><b>B2B_S_US_01_testGetRefUsageTypes</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_US_01: B2B CRM UI API: Get ref usage types</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_US_01_testGetRefUsageTypes(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2041611826", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2041611826'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_US_01_testGetRefUsageTypes(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_US_02_testGetUsage()'><b>B2B_S_US_02_testGetUsage</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_US_02: B2B CRM UI API: Get Usage</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_US_02_testGetUsage(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1794068152", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1794068152'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_US_02_testGetUsage(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+<tr>
+<td title='testCases.eir.b2b.api.TestB2BCrmApi.B2B_S_US_03_testGetUsageSummary()'><b>B2B_S_US_03_testGetUsageSummary</b><br>Test class: testCases.eir.b2b.api.TestB2BCrmApi<br>Test method: B2B_S_US_01: B2B CRM UI API: Get ref usage types</td>
+<td><div><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_US_03_testGetUsageSummary(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace196717412", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace196717412'><pre>java.lang.Throwable: Method TestB2BCrmApi.B2B_S_US_03_testGetUsageSummary(org.testng.ITestContext)[pri:0, instance:testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2b.api.TestB2BCrmApi@1f021e6c</td></tr>
+</table><p>
+</body>
+</html>

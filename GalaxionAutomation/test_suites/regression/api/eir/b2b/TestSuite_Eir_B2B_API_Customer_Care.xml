@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Eir B2B API Test Suite">
+	<test thread-count="15" name="Test" preserve-order="true" >
+		<classes>
+			<class name="testCases.eir.b2b.api.TestB2BCrmApi">
+				<methods>
+					<include name="testLogin" />
+					<include name="B2B_A_SE_01_testSearchByName" />
+					<include name="B2B_A_SE_01_testSearchByBillingAccountID" />
+					<include name="B2B_A_SE_01_testSearchByMSISDN" />
+					<include name="B2B_A_SE_02_testOrderSearch" />
+					<include name="B2B_A_GE_01_testGetAccountHierarchy" />
+					<include name="B2B_A_GE_02_testGetAccountDetails" />
+					<include name="B2B_A_GE_03_testMakeAccountUnbillable" />
+					<exclude name="B2B_A_GE_04_testUpdateMainAccountDetails" />
+					<include name="B2B_A_GE_05_testUpdateAccountGeneralDetails" />
+					<include name="B2B_A_GE_06_testUpdateCompanyDetails" />
+					<include name="B2B_A_GE_07_testDeviceEnrollments" />
+					<include name="B2B_A_GE_08_testUpdateTaxDetails" />
+					<include name="B2B_A_PY_01_testGetPaymentMethods" />
+					<include name="B2B_A_PY_02_testUpdateBillingDetails" />
+					<include name="B2B_A_PY_03_testUpdatePaymentTerm" />
+					<include name="B2B_A_PY_04_testValidateIban" />
+					<include name="B2B_A_PY_05_testAddSepaPaymentMethod" />
+					<include name="B2B_A_PY_06_testUpdateDefaultPaymentMethod" />
+					<include name="B2B_A_PY_07_testDeleteSepaPaymentMethod" />
+					<include name="B2B_A_HW_01_testGetHardwareFund" />
+					<include name="B2B_A_HW_02_testGetHardwareFundAdjustmentReasons" />
+					<include name="B2B_A_TR_01_testGetTransactionHistory" />
+					<include name="B2B_A_PY_07_testDeleteSepaPaymentMethod" />
+					<include name="B2B_A_TR_01_testGetTransactionHistory" />
+					<include name="B2B_A_TR_02_testGetAdjustmentReasons" />
+					<include name="B2B_A_TR_03_testGetAdjustment" />
+					<include name="B2B_A_DO_01_testGetDocuments" />
+					<include name="B2B_A_DO_02_testGetRefDocumentTypes" />
+					<include name="B2B_A_DO_03_testUploadDocument" />
+					<include name="B2B_A_DO_04_testDeleteDocument" />
+					<include name="B2B_A_CH_01_testGetCustomerHistoryFilters" />
+					<include name="B2B_A_CH_02_testGetCustomerHistory" />
+					<include name="B2B_A_CH_03_testAddNote" />
+					<include name="B2B_A_CH_04_testGetCustomerHistoryItem" />
+					<include name="B2B_A_CH_05_testGetEmailNotificationSubjects" />
+					<include name="B2B_A_CH_06_testGetEmailNotifications" />
+					<include name="B2B_A_CH_07_testGetSmsNotifications" />
+					<include name="B2B_A_AO_01_testGetActiveAccountLevelAddons" />
+					<include name="B2B_A_AO_02_testGetAvailableAccountLevelAddons" />
+					<include name="B2B_A_EQ_01_testGetAvailableHandsets" />
+					<include name="B2B_A_EQ_02_testGetAvailableHandsetsAndDongles" />
+					<include name="B2B_A_BR_01_testAddAccountLevelBarring" />
+					<include name="B2B_A_BR_02_testRemoveAccountLevelBarring" />
+					<include name="B2B_A_OR_01_testGetOrderHistory" />
+					<include name="B2B_A_OR_02_testGetFilteredOrderHistory" />
+					<include name="B2B_A_OR_03_testGetOrder" />
+					<include name="B2B_A_CO_01_testGetAccountContacts" />
+					<include name="B2B_A_CO_02_testGetRefContactTypes" />
+					<include name="B2B_A_CO_03_testGetAllContacts" />
+					<include name="B2B_A_CO_06_testAddContact" />
+					<include name="B2B_A_CO_07_testUpdateContactType" />
+					<include name="B2B_A_CO_08_testEircodeLookup" />
+					<include name="B2B_A_SU_01_testGetSubscriptions" />
+					<include name="B2B_A_SU_02_testGetSimDetails" />
+					<include name="B2B_S_GE_01_testGetSubscription" />
+					<include name="B2B_S_US_01_testGetRefUsageTypes" />
+					<include name="B2B_S_US_02_testGetUsage" />
+					<include name="B2B_S_US_03_testGetUsageSummary" />
+					<include name="B2B_A_CA_03_testGenerateNewOrderNumber" />
+					<include name="B2B_A_CS_01_testGetOffersForAccountType" />
+					<include name="B2B_A_CS_02_testGetTariffPlansForOfferCode" />
+					<include name="B2B_A_CS_03_testGetAddonsForCorporateOffer" />
+					<include name="B2B_A_CA_01_testGetRefMarketSegments" />
+					<include name="B2B_A_CA_02_testGetRefBillCycles" />
+					<include name="B2B_S_MS_01_testGetNextMSISDN" />
+					<include name="B2B_S_MS_02_testSwapMSISDN" />
+					<include name="B2B_S_AO_01_testGetAvailableServiceLevelAddons" />
+					<include name="B2B_S_AO_02_testGetActiveServiceLevelAddons" />
+					<include name="B2B_S_BR_01_testGetBarrings" />
+					<include name="B2B_S_CH_01_testGetAvailableOffersForChangeOffer" />
+					<include name="B2B_S_CH_02_testGetChangeOfferEligibility" />
+					<include name="B2B_S_CH_01_testGetPendingTerminationRequests" />
+					<include name="B2B_S_PO_01_testGetPortingTimes" />
+					<include name="B2B_S_PO_02_testGetPortingHistory" />
+					<include name="B2B_S_PO_03_testGetIncompletePorts" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,70 @@
+{
+	"catalogOfferId": 1002,
+	"offerType": "POSTPAY",
+	"domain": "MOBILE",
+	"service": {
+		"serviceName": null,
+		"orderServiceStatus": "INITIAL",
+		"port": null,
+		"directoryPreference": "EXDIRECTORY"
+	},
+	"topUpAmount": null,
+	"item": {
+		"equipments": [
+			{
+				"catalogItemId": 101,
+				"attributes": []
+			}
+		],
+		"charges": [
+			{
+				"catalogItemId": 301,
+				"pricePlan": null,
+				"attributes": []
+			},
+			{
+				"catalogItemId": 303,
+				"pricePlan": null,
+				"attributes": []
+			}
+		],
+		"usages": [
+			{
+				"catalogItemId": 203,
+				"attributes": []
+			},
+			{
+				"catalogItemId": 204,
+				"attributes": []
+			},
+			{
+				"catalogItemId": 201,
+				"attributes": []
+			}
+		],
+		"networks": [
+			{
+				"catalogItemId": 6,
+				"attributes": []
+			},
+			{
+				"catalogItemId": 9,
+				"attributes": []
+			},
+			{
+				"catalogItemId": 10,
+				"attributes": []
+			},
+			{
+				"catalogItemId": 8,
+				"attributes": []
+			},
+			{
+				"catalogItemId": 7,
+				"attributes": []
+			}
+		],
+		"addOns": [],
+		"discounts": []
+	}
+}

@@ -1,0 +1,25 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.meteor.ie/SOA/1.0/MeteorDataModelINProvisioning/v1" xmlns:com="http://www.meteor.ie/SOA/1.0/Common" xmlns:v11="http://www.meteor.ie/MID/Resource/LogicalResource/LogicalResource/v1" xmlns:v12="http://www.meteor.ie/SOA/1.0/MeteorDataModelIN/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:acceptTerms>
+         <com:serviceUser>
+            <com:user>SOAPUI</com:user>
+            <com:applicationDescriptor>SH_Auto</com:applicationDescriptor>
+            <com:applicationIdentifier>AcceptAOC</com:applicationIdentifier>
+            <!--Optional:-->
+            <com:primaryPersonalIdentity>SH_Auto</com:primaryPersonalIdentity>
+            <!--Optional:-->
+            <com:onBehalfOfPersonalIdentity>SH_Auto</com:onBehalfOfPersonalIdentity>
+         </com:serviceUser>
+         <v11:Msisdn>$msisdn</v11:Msisdn>
+         <v1:NotificationType>$notificationType</v1:NotificationType>
+         <v1:Correlation>
+            <v12:correlationID>32938293</v12:correlationID>
+         </v1:Correlation>
+         <!--Optional:-->
+         <v1:Zone>$zone</v1:Zone>
+         <!--Optional:-->
+         <v1:TariffPlan>$tariffPlan</v1:TariffPlan>
+      </v1:acceptTerms>
+   </soapenv:Body>
+</soapenv:Envelope>

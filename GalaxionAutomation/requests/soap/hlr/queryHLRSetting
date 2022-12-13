@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:met="http://www.meteor.ie/SOA/1.0/MeteorDataModelEDAHLRProvisioningService" xmlns:com="http://www.meteor.ie/SOA/1.0/Common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <met:queryHLRSettingRequest>
+         <com:serviceUser>
+            <com:user>SH_auto</com:user>
+            <com:applicationDescriptor>SH_auto</com:applicationDescriptor>
+            <com:applicationIdentifier>SH_auto</com:applicationIdentifier>
+         </com:serviceUser>
+         <met:msisdn>$msisdn</met:msisdn>
+      </met:queryHLRSettingRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,1941 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>142/26/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Apr 21 10:05:16 BST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>498 seconds (498512 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_01_testGetCustomerHistory()'><b>CRM_A_CH_01_testGetCustomerHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_CH_01: CRM UI: Get customer history<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [415]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_01_testGetCustomerHistory(TestEirCrmApi.java:1207)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1260651126", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1260651126'><pre>java.lang.AssertionError: Response code expected [200] but found [415]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_01_testGetCustomerHistory(TestEirCrmApi.java:1207)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_01_testGetCustomerHistory()'><b>CRM_A_CH_01_testGetCustomerHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_CH_01: CRM UI: Get customer history<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [415]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_01_testGetCustomerHistory(TestEirCrmApi.java:1207)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1574916376", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1574916376'><pre>java.lang.AssertionError: Response code expected [200] but found [415]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_01_testGetCustomerHistory(TestEirCrmApi.java:1207)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_01_testGetCustomerHistory()'><b>CRM_A_CH_01_testGetCustomerHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_CH_01: CRM UI: Get customer history<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [403]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_01_testGetCustomerHistory(TestEirCrmApi.java:1207)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1694262384", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1694262384'><pre>java.lang.AssertionError: Response code expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_01_testGetCustomerHistory(TestEirCrmApi.java:1207)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_02_testGetFilteredCustomerHistory()'><b>CRM_A_CH_02_testGetFilteredCustomerHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_CH_02: CRM UI: Get filtered customer history<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [415]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_02_testGetFilteredCustomerHistory(TestEirCrmApi.java:1226)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1697258007", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1697258007'><pre>java.lang.AssertionError: Response code expected [200] but found [415]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_02_testGetFilteredCustomerHistory(TestEirCrmApi.java:1226)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_02_testGetFilteredCustomerHistory()'><b>CRM_A_CH_02_testGetFilteredCustomerHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_CH_02: CRM UI: Get filtered customer history<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [415]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_02_testGetFilteredCustomerHistory(TestEirCrmApi.java:1226)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace404787971", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace404787971'><pre>java.lang.AssertionError: Response code expected [200] but found [415]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_02_testGetFilteredCustomerHistory(TestEirCrmApi.java:1226)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_02_testGetFilteredCustomerHistory()'><b>CRM_A_CH_02_testGetFilteredCustomerHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_CH_02: CRM UI: Get filtered customer history<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [403]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_02_testGetFilteredCustomerHistory(TestEirCrmApi.java:1226)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1386693416", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1386693416'><pre>java.lang.AssertionError: Response code expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CH_02_testGetFilteredCustomerHistory(TestEirCrmApi.java:1226)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CO_01_testGetCollectionsStatus()'><b>CRM_A_CO_01_testGetCollectionsStatus</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_CO_01: CRM UI: Get collection status<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [404]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CO_01_testGetCollectionsStatus(TestEirCrmApi.java:1088)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1272902791", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1272902791'><pre>java.lang.AssertionError: Response code expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CO_01_testGetCollectionsStatus(TestEirCrmApi.java:1088)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CO_01_testGetCollectionsStatus()'><b>CRM_A_CO_01_testGetCollectionsStatus</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_CO_01: CRM UI: Get collection status<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [404]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CO_01_testGetCollectionsStatus(TestEirCrmApi.java:1088)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1303734497", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1303734497'><pre>java.lang.AssertionError: Response code expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CO_01_testGetCollectionsStatus(TestEirCrmApi.java:1088)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CO_01_testGetCollectionsStatus()'><b>CRM_A_CO_01_testGetCollectionsStatus</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_CO_01: CRM UI: Get collection status<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [404]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CO_01_testGetCollectionsStatus(TestEirCrmApi.java:1088)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace801777708", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace801777708'><pre>java.lang.AssertionError: Response code expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_CO_01_testGetCollectionsStatus(TestEirCrmApi.java:1088)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PM_02_testGetCreditScore()'><b>CRM_A_PM_02_testGetCreditScore</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PM_02: CRM UI: Get credit score<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;createdAt&quot; (class microservices.frontend.eir_crm_ui_frontend.dto.response.get_credit_score_response.GetCreditScoreResponse), not marked as ignorable (5 known properties: &quot;creditScore&quot;, &quot;occupation&quot;, &quot;residentialStatus&quot;, &quot;prospectUuid&quot;, &quot;contactUuid&quot;])
+ at [Source: (String)&quot;{&quot;creditScore&quot;:&quot;2&quot;,&quot;occupation&quot;:&quot;RETIRED&quot;,&quot;residentialStatus&quot;:&quot;OWNER&quot;,&quot;prospectUuid&quot;:&quot;2c062db0-9253-4144-b83c-645b7dcc2991&quot;,&quot;contactUuid&quot;:&quot;da022ef1-9790-4ff9-9357-1225efbb8ec6&quot;,&quot;createdAt&quot;:&quot;2022-03-03T16:31:30&quot;,&quot;updatedAt&quot;:&quot;2022-03-03T16:31:30&quot;}&quot;; line: 1, column: 191] (through reference chain: microservices.frontend.eir_crm_ui_frontend.dto.response.get_credit_score_response.GetCreditScoreResponse[&quot;createdAt&quot;])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:840)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1179)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1592)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1570)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:294)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:151)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4202)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3205)
+	at com.fasterxml.jackson.databind.ObjectMapper$readValue$0.call(Unknown Source)
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.groovy:46)
+	at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
+	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.groovy:103)
+	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer$deserializeWithJackson2.callStatic(Unknown Source)
+	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.groovy:68)
+	at io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1091)
+	at io.restassured.path.json.JsonPath.getObject(JsonPath.java:560)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PM_02_testGetCreditScore(TestEirCrmApi.java:1141)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace199263201", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace199263201'><pre>com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;createdAt&quot; (class microservices.frontend.eir_crm_ui_frontend.dto.response.get_credit_score_response.GetCreditScoreResponse), not marked as ignorable (5 known properties: &quot;creditScore&quot;, &quot;occupation&quot;, &quot;residentialStatus&quot;, &quot;prospectUuid&quot;, &quot;contactUuid&quot;])
+ at [Source: (String)&quot;{&quot;creditScore&quot;:&quot;2&quot;,&quot;occupation&quot;:&quot;RETIRED&quot;,&quot;residentialStatus&quot;:&quot;OWNER&quot;,&quot;prospectUuid&quot;:&quot;2c062db0-9253-4144-b83c-645b7dcc2991&quot;,&quot;contactUuid&quot;:&quot;da022ef1-9790-4ff9-9357-1225efbb8ec6&quot;,&quot;createdAt&quot;:&quot;2022-03-03T16:31:30&quot;,&quot;updatedAt&quot;:&quot;2022-03-03T16:31:30&quot;}&quot;; line: 1, column: 191] (through reference chain: microservices.frontend.eir_crm_ui_frontend.dto.response.get_credit_score_response.GetCreditScoreResponse[&quot;createdAt&quot;])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:840)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1179)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1592)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1570)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:294)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:151)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4202)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3205)
+	at com.fasterxml.jackson.databind.ObjectMapper$readValue$0.call(Unknown Source)
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.groovy:46)
+	at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
+	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.groovy:103)
+	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer$deserializeWithJackson2.callStatic(Unknown Source)
+	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.groovy:68)
+	at io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1091)
+	at io.restassured.path.json.JsonPath.getObject(JsonPath.java:560)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PM_02_testGetCreditScore(TestEirCrmApi.java:1141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_10_testUpdateEmailAddress()'><b>CRM_A_PR_10_testUpdateEmailAddress</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_10: CRM UI: Update email address<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: expected object to not be null
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_10_testUpdateEmailAddress(TestEirCrmApi.java:731)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace209011713", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace209011713'><pre>java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertNotNull(Assert.java:874)
+	at org.testng.Assert.assertNotNull(Assert.java:858)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_10_testUpdateEmailAddress(TestEirCrmApi.java:731)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>24</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_10_testUpdateEmailAddress()'><b>CRM_A_PR_10_testUpdateEmailAddress</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_10: CRM UI: Update email address<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: expected object to not be null
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_10_testUpdateEmailAddress(TestEirCrmApi.java:731)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace434918231", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace434918231'><pre>java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertNotNull(Assert.java:874)
+	at org.testng.Assert.assertNotNull(Assert.java:858)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_10_testUpdateEmailAddress(TestEirCrmApi.java:731)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>23</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_10_testUpdateEmailAddress()'><b>CRM_A_PR_10_testUpdateEmailAddress</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_10: CRM UI: Update email address<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [204] but found [500]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_10_testUpdateEmailAddress(TestEirCrmApi.java:725)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1863397232", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1863397232'><pre>java.lang.AssertionError: Response code expected [204] but found [500]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_10_testUpdateEmailAddress(TestEirCrmApi.java:725)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_CO_01_testGetChangeOfferEligibility()'><b>CRM_S_CO_01_testGetChangeOfferEligibility</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_CO_01: CRM UI: Get change offer eligibility<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [204] but found [401]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_CO_01_testGetChangeOfferEligibility(TestEirCrmApi.java:2042)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1658116804", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1658116804'><pre>java.lang.AssertionError: Response code expected [204] but found [401]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_CO_01_testGetChangeOfferEligibility(TestEirCrmApi.java:2042)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_FE_02_testPauseFeature()'><b>CRM_S_FE_02_testPauseFeature</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_FE_02: CRM UI: Pause feature<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [400]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_FE_02_testPauseFeature(TestEirCrmApi.java:2309)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1242621531", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1242621531'><pre>java.lang.AssertionError: Response code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_FE_02_testPauseFeature(TestEirCrmApi.java:2309)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_MS_01_testMsisdnSwap()'><b>CRM_S_MS_01_testMsisdnSwap</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_MS_01: CRM UI: Place a random MSISDN Swap<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [201] but found [400]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_MS_01_testMsisdnSwap(TestEirCrmApi.java:1909)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1527980131", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1527980131'><pre>java.lang.AssertionError: Response code expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_MS_01_testMsisdnSwap(TestEirCrmApi.java:1909)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_MS_01_testMsisdnSwap()'><b>CRM_S_MS_01_testMsisdnSwap</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_MS_01: CRM UI: Place a random MSISDN Swap<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [201] but found [400]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_MS_01_testMsisdnSwap(TestEirCrmApi.java:1909)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace886499748", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace886499748'><pre>java.lang.AssertionError: Response code expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_MS_01_testMsisdnSwap(TestEirCrmApi.java:1909)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PO_04_testGetIncompletePorts()'><b>CRM_S_PO_04_testGetIncompletePorts</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_CO_04: CRM UI: : Get port history<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [404]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PO_04_testGetIncompletePorts(TestEirCrmApi.java:2183)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1801210741", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1801210741'><pre>java.lang.AssertionError: Response code expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PO_04_testGetIncompletePorts(TestEirCrmApi.java:2183)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PO_04_testGetIncompletePorts()'><b>CRM_S_PO_04_testGetIncompletePorts</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_CO_04: CRM UI: : Get port history<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [404]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PO_04_testGetIncompletePorts(TestEirCrmApi.java:2183)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1322011459", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1322011459'><pre>java.lang.AssertionError: Response code expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PO_04_testGetIncompletePorts(TestEirCrmApi.java:2183)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PO_04_testGetIncompletePorts()'><b>CRM_S_PO_04_testGetIncompletePorts</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_CO_04: CRM UI: : Get port history<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [404]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PO_04_testGetIncompletePorts(TestEirCrmApi.java:2183)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1924533224", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1924533224'><pre>java.lang.AssertionError: Response code expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PO_04_testGetIncompletePorts(TestEirCrmApi.java:2183)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_05_activateSimSwap()'><b>CRM_S_SR_05_activateSimSwap</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_SR_05: CRM UI: Activate replacement SIM<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: did not expect to find [true] but found [false]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_05_activateSimSwap(TestEirCrmApi.java:1859)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1003979419", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1003979419'><pre>java.lang.AssertionError: did not expect to find [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_05_activateSimSwap(TestEirCrmApi.java:1859)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>66</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_05_activateSimSwap()'><b>CRM_S_SR_05_activateSimSwap</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_SR_05: CRM UI: Activate replacement SIM<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: did not expect to find [true] but found [false]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_05_activateSimSwap(TestEirCrmApi.java:1859)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace426229810", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace426229810'><pre>java.lang.AssertionError: did not expect to find [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_05_activateSimSwap(TestEirCrmApi.java:1859)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>65</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_05_activateSimSwap()'><b>CRM_S_SR_05_activateSimSwap</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_SR_05: CRM UI: Activate replacement SIM<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: did not expect to find [true] but found [false]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_05_activateSimSwap(TestEirCrmApi.java:1859)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace775708364", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace775708364'><pre>java.lang.AssertionError: did not expect to find [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_05_activateSimSwap(TestEirCrmApi.java:1859)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>64</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_US_03_testGetUsageSummary()'><b>CRM_S_US_03_testGetUsageSummary</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_US_03: CRM UI: Get usage summary<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: service_detail expected object to not be null
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_US_03_testGetUsageSummary(TestEirCrmApi.java:1530)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace153820122", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace153820122'><pre>java.lang.AssertionError: service_detail expected object to not be null
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertNotNull(Assert.java:874)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_US_03_testGetUsageSummary(TestEirCrmApi.java:1530)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_US_03_testGetUsageSummary()'><b>CRM_S_US_03_testGetUsageSummary</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_US_03: CRM UI: Get usage summary<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: service_detail expected object to not be null
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_US_03_testGetUsageSummary(TestEirCrmApi.java:1530)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace737025043", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace737025043'><pre>java.lang.AssertionError: service_detail expected object to not be null
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertNotNull(Assert.java:874)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_US_03_testGetUsageSummary(TestEirCrmApi.java:1530)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_VO_02_testProcessTopup()'><b>CRM_S_VO_02_testProcessTopup</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_VO_02: CRM UI: Process topup voucher<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td><div><pre>java.lang.AssertionError: Response code expected [200] but found [400]
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_VO_02_testProcessTopup(TestEirCrmApi.java:1608)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace736640638", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace736640638'><pre>java.lang.AssertionError: Response code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at testCases.eir.b2c.api.TestEirCrmApi.CRM_S_VO_02_testProcessTopup(TestEirCrmApi.java:1608)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_01_testGetKeycloakAccount()'><b>CRM_A_AC_01_testGetKeycloakAccount</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_01: CRM UI: Get keycloak account and channels<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_01_testGetKeycloakAccount()'><b>CRM_A_AC_01_testGetKeycloakAccount</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_01: CRM UI: Get keycloak account and channels<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_01_testGetKeycloakAccount()'><b>CRM_A_AC_01_testGetKeycloakAccount</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_01: CRM UI: Get keycloak account and channels<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_02_testGetAccount()'><b>CRM_A_AC_02_testGetAccount</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_02: CRM UI: Get account details<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_02_testGetAccount()'><b>CRM_A_AC_02_testGetAccount</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_02: CRM UI: Get account details<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_02_testGetAccount()'><b>CRM_A_AC_02_testGetAccount</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_02: CRM UI: Get account details<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_03_testGetContacts()'><b>CRM_A_AC_03_testGetContacts</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_03: Eir CRM: Get contacts<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_03_testGetContacts()'><b>CRM_A_AC_03_testGetContacts</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_03: Eir CRM: Get contacts<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_03_testGetContacts()'><b>CRM_A_AC_03_testGetContacts</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_03: Eir CRM: Get contacts<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_04_testGetSubscriptions()'><b>CRM_A_AC_04_testGetSubscriptions</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_04: CRM UI: Get subscriptions<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_04_testGetSubscriptions()'><b>CRM_A_AC_04_testGetSubscriptions</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_04: CRM UI: Get subscriptions<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_04_testGetSubscriptions()'><b>CRM_A_AC_04_testGetSubscriptions</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_04: CRM UI: Get subscriptions<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_05_testGetContact()'><b>CRM_A_AC_05_testGetContact</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_05: CRM UI: Get contact<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_05_testGetContact()'><b>CRM_A_AC_05_testGetContact</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_05: CRM UI: Get contact<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>2</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_05_testGetContact()'><b>CRM_A_AC_05_testGetContact</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_05: CRM UI: Get contact<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_06_testGetAccountBalance()'><b>CRM_A_AC_06_testGetAccountBalance</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_06: CRM UI: Get account balance<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_06_testGetAccountBalance()'><b>CRM_A_AC_06_testGetAccountBalance</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_06: CRM UI: Get account balance<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_06_testGetAccountBalance()'><b>CRM_A_AC_06_testGetAccountBalance</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_06: CRM UI: Get account balance<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_07_testGetServices()'><b>CRM_A_AC_07_testGetServices</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_07: CRM UI: Get services<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_07_testGetServices()'><b>CRM_A_AC_07_testGetServices</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_07: CRM UI: Get services<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_07_testGetServices()'><b>CRM_A_AC_07_testGetServices</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_07: CRM UI: Get services<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_08_testGetWebNotifications()'><b>CRM_A_AC_08_testGetWebNotifications</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_08: CRM UI: PAYG: Get web notifications<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_08_testGetWebNotifications()'><b>CRM_A_AC_08_testGetWebNotifications</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_08: CRM UI: PAYG: Get web notifications<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_AC_08_testGetWebNotifications()'><b>CRM_A_AC_08_testGetWebNotifications</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_AC_08: CRM UI: PAYG: Get web notifications<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_DM_01_testGetDocumentNames()'><b>CRM_A_DM_01_testGetDocumentNames</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_DM_01: Get ref document names<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_DM_02_testGetDocuments()'><b>CRM_A_DM_02_testGetDocuments</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_DM_02: CRM UI: Get Documents<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_OR_01_testGetOrderHistory()'><b>CRM_A_OR_01_testGetOrderHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_OR_01: CRM UI: Get order history<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_OR_01_testGetOrderHistory()'><b>CRM_A_OR_01_testGetOrderHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_OR_01: CRM UI: Get order history<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_OR_01_testGetOrderHistory()'><b>CRM_A_OR_01_testGetOrderHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_OR_01: CRM UI: Get order history<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_OR_02_testGetOrder()'><b>CRM_A_OR_02_testGetOrder</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_OR_02: CRM UI: Get order details<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_OR_02_testGetOrder()'><b>CRM_A_OR_02_testGetOrder</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_OR_02: CRM UI: Get order details<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_OR_02_testGetOrder()'><b>CRM_A_OR_02_testGetOrder</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_OR_02: CRM UI: Get order details<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PM_01_testGetPaymentMethods()'><b>CRM_A_PM_01_testGetPaymentMethods</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PM_01: CRM UI: Get payment methods<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PM_01_testGetPaymentMethods()'><b>CRM_A_PM_01_testGetPaymentMethods</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PM_01: CRM UI: Get payment methods<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PM_01_testGetPaymentMethods()'><b>CRM_A_PM_01_testGetPaymentMethods</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PM_01: CRM UI: Get payment methods<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PM_03_testUpdateBillDeliveryType()'><b>CRM_A_PM_03_testUpdateBillDeliveryType</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PM_03: CRM UI: Update bill delivery type<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>2</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PM_03_testUpdateBillDeliveryType()'><b>CRM_A_PM_03_testUpdateBillDeliveryType</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PM_03: CRM UI: Update bill delivery type<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>2</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PM_03_testUpdateBillDeliveryType()'><b>CRM_A_PM_03_testUpdateBillDeliveryType</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PM_03: CRM UI: Update bill delivery type<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_01_testGetContactPermissions()'><b>CRM_A_PR_01_testGetContactPermissions</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_01: CRM UI: Get contact permissions<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_01_testGetContactPermissions()'><b>CRM_A_PR_01_testGetContactPermissions</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_01: CRM UI: Get contact permissions<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_01_testGetContactPermissions()'><b>CRM_A_PR_01_testGetContactPermissions</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_01: CRM UI: Get contact permissions<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_02_testGetSecurityAnswer()'><b>CRM_A_PR_02_testGetSecurityAnswer</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_02: CRM UI: Get security question<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_02_testGetSecurityAnswer()'><b>CRM_A_PR_02_testGetSecurityAnswer</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_02: CRM UI: Get security question<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_02_testGetSecurityAnswer()'><b>CRM_A_PR_02_testGetSecurityAnswer</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_02: CRM UI: Get security question<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_03_testGetContactPermissionsV1()'><b>CRM_A_PR_03_testGetContactPermissionsV1</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_03: CRM UI: Get contact permissions v1<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_03_testGetContactPermissionsV1()'><b>CRM_A_PR_03_testGetContactPermissionsV1</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_03: CRM UI: Get contact permissions v1<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_03_testGetContactPermissionsV1()'><b>CRM_A_PR_03_testGetContactPermissionsV1</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_03: CRM UI: Get contact permissions v1<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_04_testGetRefSecurityQuestions()'><b>CRM_A_PR_04_testGetRefSecurityQuestions</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_04: CRM UI: Get ref security questions<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_04_testGetRefSecurityQuestions()'><b>CRM_A_PR_04_testGetRefSecurityQuestions</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_04: CRM UI: Get ref security questions<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_04_testGetRefSecurityQuestions()'><b>CRM_A_PR_04_testGetRefSecurityQuestions</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_04: CRM UI: Get ref security questions<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_05_testUpdateSecurityQuestion()'><b>CRM_A_PR_05_testUpdateSecurityQuestion</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_05: CRM UI: Update security question<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_06_testEircodeLookup()'><b>CRM_A_PR_06_testEircodeLookup</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_06: CRM UI: Eircode lookup<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_07_testUpdateBillingAddress()'><b>CRM_A_PR_07_testUpdateBillingAddress</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_07: CRM UI: Update billing address<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_07_testUpdateBillingAddress()'><b>CRM_A_PR_07_testUpdateBillingAddress</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_07: CRM UI: Update billing address<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>2</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_07_testUpdateBillingAddress()'><b>CRM_A_PR_07_testUpdateBillingAddress</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_07: CRM UI: Update billing address<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_08_testUpdateContactDetails()'><b>CRM_A_PR_08_testUpdateContactDetails</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_08: CRM UI: Update contact details<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>2</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_08_testUpdateContactDetails()'><b>CRM_A_PR_08_testUpdateContactDetails</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_08: CRM UI: Update contact details<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>2</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_08_testUpdateContactDetails()'><b>CRM_A_PR_08_testUpdateContactDetails</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_08: CRM UI: Update contact details<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_12_testAddAuthorizedUser()'><b>CRM_A_PR_12_testAddAuthorizedUser</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_12: CRM UI: Add authorized user<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_12_testAddAuthorizedUser()'><b>CRM_A_PR_12_testAddAuthorizedUser</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_12: CRM UI: Add authorized user<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_12_testAddAuthorizedUser()'><b>CRM_A_PR_12_testAddAuthorizedUser</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_12: CRM UI: Add authorized user<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_13_testUpdateContactNumber()'><b>CRM_A_PR_13_testUpdateContactNumber</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_13: CRM UI: Update contact number<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_13_testUpdateContactNumber()'><b>CRM_A_PR_13_testUpdateContactNumber</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_13: CRM UI: Update contact number<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_13_testUpdateContactNumber()'><b>CRM_A_PR_13_testUpdateContactNumber</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_13: CRM UI: Update contact number<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_14_testAddContactNumber()'><b>CRM_A_PR_14_testAddContactNumber</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_14: CRM UI: Add contact number<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_14_testAddContactNumber()'><b>CRM_A_PR_14_testAddContactNumber</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_14: CRM UI: Add contact number<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_14_testAddContactNumber()'><b>CRM_A_PR_14_testAddContactNumber</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_14: CRM UI: Add contact number<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_15_testDeleteContactNumber()'><b>CRM_A_PR_15_testDeleteContactNumber</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_15: CRM UI: Delete contact number<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_15_testDeleteContactNumber()'><b>CRM_A_PR_15_testDeleteContactNumber</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_15: CRM UI: Delete contact number<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_PR_15_testDeleteContactNumber()'><b>CRM_A_PR_15_testDeleteContactNumber</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_PR_15: CRM UI: Delete contact number<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_SE_01_testSearchByBillingAccountID()'><b>CRM_A_SE_01_testSearchByBillingAccountID</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_SE_01: CRM UI: Search by billing account ID<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>2</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_SE_01_testSearchByBillingAccountID()'><b>CRM_A_SE_01_testSearchByBillingAccountID</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_SE_01: CRM UI: Search by billing account ID<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>2</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_SE_01_testSearchByBillingAccountID()'><b>CRM_A_SE_01_testSearchByBillingAccountID</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_SE_01: CRM UI: Search by billing account ID<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_SE_01_testSearchByMsisdn()'><b>CRM_A_SE_01_testSearchByMsisdn</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_SE_01: CRM UI: Search by MSISDN<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>3</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_SE_01_testSearchByMsisdn()'><b>CRM_A_SE_01_testSearchByMsisdn</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_SE_01: CRM UI: Search by MSISDN<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>2</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_SE_01_testSearchByMsisdn()'><b>CRM_A_SE_01_testSearchByMsisdn</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_SE_01: CRM UI: Search by MSISDN<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_TR_01_testGetRefPostpayAdjustmentReasons()'><b>CRM_A_TR_01_testGetRefPostpayAdjustmentReasons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_TR_01: CRM UI: Get ref postpay adjustment reasons<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_TR_02_testGetTransactionHistory()'><b>CRM_A_TR_02_testGetTransactionHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_TR_02: CRM UI: Get transaction history<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_TR_02_testGetTransactionHistory()'><b>CRM_A_TR_02_testGetTransactionHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_TR_02: CRM UI: Get transaction history<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_TR_02_testGetTransactionHistory()'><b>CRM_A_TR_02_testGetTransactionHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_TR_02: CRM UI: Get transaction history<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_TR_03_testProcessAccountLevelAdjustment()'><b>CRM_A_TR_03_testProcessAccountLevelAdjustment</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_TR_03: CRM UI: Process account level adjustment<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_TR_03_testProcessAccountLevelAdjustment()'><b>CRM_A_TR_03_testProcessAccountLevelAdjustment</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_TR_03: CRM UI: Process account level adjustment<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_A_TR_03_testProcessAccountLevelAdjustment()'><b>CRM_A_TR_03_testProcessAccountLevelAdjustment</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_A_TR_03: CRM UI: Process account level adjustment<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_BA_01_testGetRefPrepayAdjustmentReasons()'><b>CRM_S_BA_01_testGetRefPrepayAdjustmentReasons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_BA_01: CRM UI: Get ref prepay adjustment reasons<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_BA_02_testMakePrepayBalanceAdjustment()'><b>CRM_S_BA_02_testMakePrepayBalanceAdjustment</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_BA_02: CRM UI: Make service level balance adjustment<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>3</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_BR_01_testGetBarrings()'><b>CRM_S_BR_01_testGetBarrings</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_BR_01: CRM UI: Get barring details<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_BR_01_testGetBarrings()'><b>CRM_S_BR_01_testGetBarrings</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_BR_01: CRM UI: Get barring details<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_BR_01_testGetBarrings()'><b>CRM_S_BR_01_testGetBarrings</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_BR_01: CRM UI: Get barring details<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_CO_01_testGetPortingTimes()'><b>CRM_S_CO_01_testGetPortingTimes</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_CO_01: CRM UI: Eir CRM - PAYG: Get porting times<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_CO_01_testGetPortingTimes()'><b>CRM_S_CO_01_testGetPortingTimes</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_CO_01: CRM UI: Eir CRM - PAYG: Get porting times<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_CO_01_testGetPortingTimes()'><b>CRM_S_CO_01_testGetPortingTimes</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_CO_01: CRM UI: Eir CRM - PAYG: Get porting times<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_CO_02_testGetChangeOfferEarlyCeaseCharges()'><b>CRM_S_CO_02_testGetChangeOfferEarlyCeaseCharges</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_CO_02: CRM UI: Get change offer early cease charges<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_CO_03_testGetChangeOfferRefWaivingReasons()'><b>CRM_S_CO_03_testGetChangeOfferRefWaivingReasons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_CO_03: CRM UI: Get change offer ref waiving reasons<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_DI_01_testGetRefDiscountAddReasons()'><b>CRM_S_DI_01_testGetRefDiscountAddReasons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_DI_01: CRM UI: Get ref discount add reasons<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_DI_02_testGetRefDiscountRemoveReasons()'><b>CRM_S_DI_02_testGetRefDiscountRemoveReasons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_DI_02: CRM UI: Get ref discount remove reasons<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_DI_03_testGetActiveDiscounts()'><b>CRM_S_DI_03_testGetActiveDiscounts</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_DI_03: CRM UI: Get active discounts<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_DI_04_testGetAvailableDiscounts()'><b>CRM_S_DI_04_testGetAvailableDiscounts</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_DI_04: CRM UI: Get available discounts<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_FE_01_testGetPausibleUsages()'><b>CRM_S_FE_01_testGetPausibleUsages</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_FE_01: CRM UI: Get pausible usages<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_FE_03_testUnpauseFeature()'><b>CRM_S_FE_03_testUnpauseFeature</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_FE_03: CRM UI: Unpause feature<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_MO_01_testAvailableAddons()'><b>CRM_S_MO_01_testAvailableAddons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_MO_01: CRM UI: Get available addons<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_MO_01_testAvailableAddons()'><b>CRM_S_MO_01_testAvailableAddons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_MO_01: CRM UI: Get available addons<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_MO_01_testAvailableAddons()'><b>CRM_S_MO_01_testAvailableAddons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_MO_01: CRM UI: Get available addons<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PD_01_testGetSubscription()'><b>CRM_S_PD_01_testGetSubscription</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PD_01: CRM UI: Get subscription<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PD_01_testGetSubscription()'><b>CRM_S_PD_01_testGetSubscription</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PD_01: CRM UI: Get subscription<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PD_01_testGetSubscription()'><b>CRM_S_PD_01_testGetSubscription</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PD_01: CRM UI: Get subscription<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PD_02_testGetServiceOffer()'><b>CRM_S_PD_02_testGetServiceOffer</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PD_02: CRM UI: Get service offer<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>4</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PD_02_testGetServiceOffer()'><b>CRM_S_PD_02_testGetServiceOffer</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PD_02: CRM UI: Get service offer<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>3</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PD_02_testGetServiceOffer()'><b>CRM_S_PD_02_testGetServiceOffer</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PD_02: CRM UI: Get service offer<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PD_03_testGetActiveAddons()'><b>CRM_S_PD_03_testGetActiveAddons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PD_03: CRM UI: Get active addons<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>3</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PD_03_testGetActiveAddons()'><b>CRM_S_PD_03_testGetActiveAddons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PD_03: CRM UI: Get active addons<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>2</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PD_03_testGetActiveAddons()'><b>CRM_S_PD_03_testGetActiveAddons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PD_03: CRM UI: Get active addons<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PD_04_testGetBalance()'><b>CRM_S_PD_04_testGetBalance</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PD_04:CRM UI: Get PAYG service balance<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>3</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PD_05_testUpdateNDDSetting()'><b>CRM_S_PD_05_testUpdateNDDSetting</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PD_05: CRM UI: Update NDD setting<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>4</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PD_05_testUpdateNDDSetting()'><b>CRM_S_PD_05_testUpdateNDDSetting</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PD_05: CRM UI: Update NDD setting<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>4</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PD_05_testUpdateNDDSetting()'><b>CRM_S_PD_05_testUpdateNDDSetting</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PD_05: CRM UI: Update NDD setting<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>3</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PO_02_testGetCurrentOperator()'><b>CRM_S_PO_02_testGetCurrentOperator</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_PO_02: CRM UI: Eir CRM - PAYG: Get current operator<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PO_03_testGetPortHistory()'><b>CRM_S_PO_03_testGetPortHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_CO_03: CRM UI: : Get port history<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PO_03_testGetPortHistory()'><b>CRM_S_PO_03_testGetPortHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_CO_03: CRM UI: : Get port history<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_PO_03_testGetPortHistory()'><b>CRM_S_PO_03_testGetPortHistory</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_CO_03: CRM UI: : Get port history<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_02_testGetPendingSimReplacements()'><b>CRM_S_SR_02_testGetPendingSimReplacements</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_SR_02: CRM UI: Get pending SIM replacements<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_02_testGetPendingSimReplacements()'><b>CRM_S_SR_02_testGetPendingSimReplacements</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_SR_02: CRM UI: Get pending SIM replacements<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_02_testGetPendingSimReplacements()'><b>CRM_S_SR_02_testGetPendingSimReplacements</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_SR_02: CRM UI: Get pending SIM replacements<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_03_testGetSimSwapEligibility()'><b>CRM_S_SR_03_testGetSimSwapEligibility</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_SR_03: Eir CRM - PAYG: Get SIM swap eligibility<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_03_testGetSimSwapEligibility()'><b>CRM_S_SR_03_testGetSimSwapEligibility</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_SR_03: Eir CRM - PAYG: Get SIM swap eligibility<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_03_testGetSimSwapEligibility()'><b>CRM_S_SR_03_testGetSimSwapEligibility</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_SR_03: Eir CRM - PAYG: Get SIM swap eligibility<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_04_testOrderReplacementSIM()'><b>CRM_S_SR_04_testOrderReplacementSIM</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_SR_04: CRM UI: Order replacement SIM<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>16</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_04_testOrderReplacementSIM()'><b>CRM_S_SR_04_testOrderReplacementSIM</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_SR_04: CRM UI: Order replacement SIM<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>16</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_SR_04_testOrderReplacementSIM()'><b>CRM_S_SR_04_testOrderReplacementSIM</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_SR_04: CRM UI: Order replacement SIM<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>16</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_TR_01_testGetTerminationRequests()'><b>CRM_S_TR_01_testGetTerminationRequests</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_TR_01: CRM UI: Get termination requests<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_TR_01_testGetTerminationRequests()'><b>CRM_S_TR_01_testGetTerminationRequests</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_TR_01: CRM UI: Get termination requests<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_TR_01_testGetTerminationRequests()'><b>CRM_S_TR_01_testGetTerminationRequests</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_TR_01: CRM UI: Get termination requests<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_TR_02_testGetRefTerminationReasons()'><b>CRM_S_TR_02_testGetRefTerminationReasons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_TR_02: CRM UI: Get termination reasons<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_TR_02_testGetRefTerminationReasons()'><b>CRM_S_TR_02_testGetRefTerminationReasons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_TR_02: CRM UI: Get termination reasons<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_TR_02_testGetRefTerminationReasons()'><b>CRM_S_TR_02_testGetRefTerminationReasons</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_TR_02: CRM UI: Get termination reasons<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_US_01_testGetRefRatingSubtotalTypes()'><b>CRM_S_US_01_testGetRefRatingSubtotalTypes</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_US_01: CRM UI: Get ref rating subtotal types<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_US_02_testGetUsage()'><b>CRM_S_US_02_testGetUsage</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_US_02: CRM UI: Get usage<br>Parameters: EIR_PREPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_US_02_testGetUsage()'><b>CRM_S_US_02_testGetUsage</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_US_02: CRM UI: Get usage<br>Parameters: EIR_POSTPAY, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_US_02_testGetUsage()'><b>CRM_S_US_02_testGetUsage</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_US_02: CRM UI: Get usage<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_US_03_testGetUsageSummary()'><b>CRM_S_US_03_testGetUsageSummary</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_US_03: CRM UI: Get usage summary<br>Parameters: GOMO, org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.CRM_S_VO_01_testGetVoucherStatus()'><b>CRM_S_VO_01_testGetVoucherStatus</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: CRM_S_VO_01: CRM UI: Get voucher status<br>Parameters: org.testng.TestRunner@45e1aa48</td>
+<td></td>
+<td>1</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.testEirLogin()'><b>testEirLogin</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: Eir CRM UI API: Authenticate</td>
+<td></td>
+<td>4</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+<tr>
+<td title='testCases.eir.b2c.api.TestEirCrmApi.testGoMoLogin()'><b>testGoMoLogin</b><br>Test class: testCases.eir.b2c.api.TestEirCrmApi<br>Test method: GoMo CSR UI API: Authenticate</td>
+<td></td>
+<td>0</td>
+<td>testCases.eir.b2c.api.TestEirCrmApi@66d1af89</td></tr>
+</table><p>
+</body>
+</html>

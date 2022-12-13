@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Eir CRM UI API  - Acquisitions Test Suite]">
+  <test thread-count="5" name="TelesalesAcquisitionTest(failed)">
+    <parameter name="channel" value="CSS"/>
+    <classes>
+      <class name="testCases.eir.b2c.api.TestEirCrmAcquisitionsApi">
+        <methods>
+          <include name="tearDownMethod"/>
+          <include name="CRM_A_AQ_17_testValidateProspectTelesales"/>
+          <include name="CRM_A_AQ_16_testGetHpp"/>
+          <include name="setUpSuite"/>
+          <include name="CRM_A_AQ_02_testAddOfferToCart"/>
+          <include name="afterSuite"/>
+          <include name="BeforeMethod"/>
+          <include name="BeforeMethod"/>
+          <include name="CRM_A_AQ_12_testSetOrderAsAnonymous" invocation-numbers="0"/>
+          <include name="CRM_A_AQ_14_testAcceptTermsAndConditions"/>
+          <include name="setUpMethod"/>
+          <include name="simulatePayment3DS2"/>
+          <include name="CRM_A_AQ_01_testCreateProspect"/>
+          <include name="testLogin"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.eir.b2c.api.TestEirCrmAcquisitionsApi -->
+    </classes>
+  </test> <!-- TelesalesAcquisitionTest(failed) -->
+</suite> <!-- Failed suite [Eir CRM UI API  - Acquisitions Test Suite] -->

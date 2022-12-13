@@ -1,0 +1,28 @@
+*************************************
+*     HEADER DESCRIPTION   *
+*************************************
+Customer: METEOR MOBILE COMMUNICATIONS
+Quantity: 1
+Type: EIRCOM_UNPAIR_ALL_IN_ONE_LTE
+Batch: 43
+
+Address1: WAREHOUSE MANAGER
+Address2: Exertis Ireland Ltd
+Address3: M50 Business Park 
+Address4: Ballymount Road Upper
+Address5: Dublin 12
+Address6: Ireland
+Transport_Key: 005
+Artwork: MET_UNIVERS
+SIM_Reference: MET UP006
+*
+****************************
+*    INPUT VARIABLES       *
+****************************
+Var_In: IMSI/ICCID/MSISDN
+****************************
+*    OUTPUT VARIABLES      *
+****************************
+Var_Out: Ki/PIN1/PUK1/PIN2/PUK2/ADM1
+***************************************
+272030020634435 893530305241000045LF  C667D1A986B28AB69271D286859DD41F 3702 55563332 4288 16301452 24E01FA9F1698E74

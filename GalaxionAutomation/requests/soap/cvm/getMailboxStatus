@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.meteor.ie/SOA/1.0/ConvergedVM/Provisioning/v1" xmlns:com="http://www.meteor.ie/SOA/1.0/Common" xmlns:v11="http://www.meteor.ie/MID/Resource/LogicalResource/LogicalResource/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getMailboxStatus>
+         <com:serviceUser>
+            <com:user>galaxion_auto</com:user>
+            <com:applicationDescriptor>galaxion_auto</com:applicationDescriptor>
+            <com:applicationIdentifier>galaxion_auto</com:applicationIdentifier>
+         </com:serviceUser>
+         <v11:Msisdn>$msisdn</v11:Msisdn>
+      </v1:getMailboxStatus>
+   </soapenv:Body>
+</soapenv:Envelope>

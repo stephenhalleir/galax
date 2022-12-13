@@ -1,0 +1,108 @@
+{
+  "eventType": "CREATE_ACCOUNT_ORDER",
+  "eventTime": "$eventTime",
+  "event": {
+    "accountOrder": {
+      "orderType": "ACQUISITION",
+      "reference": "$reference",
+      "channel": {
+        "brand": "EIR",
+        "channelName": "TELESALES",
+        "channelType": "DIRECT"
+      },
+      "customer": {
+        "owner": {
+          "personValue": {
+            "birthDate": "1981-10-10",
+            "firstName": "$ownerFirstName",
+            "lastName": "$ownerLastName",
+            "title": "MR"
+          },
+          "email": "$ownerEmail",
+          "contactPhoneNumber": "$ownerLandline",
+          "contactMobileNumber": "$ownerMobile",
+          "companyPosition": "Owner",
+          "deliveryAddress": {
+            "addressValue": {
+              "eircode": "$ownerDeliveryEircode",
+              "addressLine1": "$ownerDeliveryLine1",
+              "addressLine2": "$ownerDeliveryLine2",
+              "addressLine3": "$ownerDeliveryLine3",
+              "town": "$ownerDeliveryTown",
+              "county": "$ownerDeliveryCounty",
+              "country": "Ireland"
+            }
+          }
+        },
+        "payer": {
+          "personValue": {
+            "birthDate": "1987-05-04",
+            "firstName": "$payerFirstName",
+            "lastName": "$payerLastName",
+            "title": "MR"
+          },
+          "email": "$payerEmail",
+          "contactPhoneNumber": "$payerLandline",
+          "contactMobileNumber": "$payerMobile",
+          "companyPosition": "Finance Manager",
+          "billingAddress": {
+            "addressValue": {
+              "eircode": "$payerBillingEircode",
+              "addressLine1": "$payerBillingLine1",
+              "addressLine2": "$payerBillingLine2",
+              "addressLine3": "$payerBillingLine3",
+              "town": "$payerBillingTown",
+              "county": "$payerBillingCounty",
+              "country": "Ireland"
+            }
+          }
+        },
+        "account": {
+          "id": "$accountID",
+          "name": "$accountName",
+          "type": "$accountType",
+          "marketSegment": "$marketSegment",
+          "creditClass": "HIGH",
+          "extraInfo": {
+            "eirAccountManager": "Steve Test",
+            "customerCostCenter": "$customerCostCenter",
+            "groupICID": "$groupICID",
+            "vpnAccountNumber": "$vpnAccountNumber",
+            "salesforceCustomerId": "$salesforceCustomerId",
+            "salesforceCaseNumber": "$salesforceCaseNumber",
+            "indoorCoverageSolutionDate": "2021-02-08",
+            "agreementDuration": "3 Months"
+          },
+          "deviceEnrollment": {
+            "APPLE": "$appleDeviceEnrollment",
+            "SAMSUNG": "$samsungDeviceEnrollment",
+            "GOOGLE": "$googleDeviceEnrollment"
+          },
+          "billable": true,
+          "billingAccount": {
+            "billDeliveryType": "ONLINE",
+            "billCycleId": 4,
+            "billAnalyserConsent": true,
+            "billItemised": true
+          },
+          "tax": {
+            "companyName": "$companyName",
+            "companyRegistrationNumber": "$companyRegistrationNumber",
+            "category": "ELIGIBLE",
+            "number": "$taxNumber",
+            "certificateNumber": "$taxCertificateNumber",
+            "exemptionDocumentType": "DIP1A",
+            "exemptionStartDate": "2021-02-08",
+            "exemptionEndDate": "2022-02-08"
+          }
+        }
+      },
+      "orderPayment": {
+        "paymentMethod": {
+          "paymentMethodType": "CASH"
+        },
+        "paymentTerm": 12
+      }
+    }
+  }
+}

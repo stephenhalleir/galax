@@ -1,0 +1,20 @@
+{
+	"catalogOfferId": "$offerId",
+	"offerType": "$offerType",
+	"domain": "MOBILE",
+	"service": {
+		"serviceName": null,
+		"orderServiceStatus": "INITIAL",
+		"port": null,
+		"directoryPreference": "EXDIRECTORY"
+	},
+	"topUpAmount": null,
+	"item": {
+		"equipments": [$equipments],
+		"charges": [$charges],
+		"usages": [$usages],
+		"networks": [$networks],
+		"addOns": [],
+		"discounts": []
+	}
+}

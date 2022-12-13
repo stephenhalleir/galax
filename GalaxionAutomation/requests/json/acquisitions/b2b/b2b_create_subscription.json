@@ -1,0 +1,108 @@
+{
+  "eventType": "CREATE_SUBSCRIBER_ORDER",
+  "eventTime": "$eventTime",
+  "event": {
+    "subscriberOrder": {
+      "orderType": "CROSS_SELL",
+      "reference": "$reference",
+      "externalId": "SALES_FORCE_ID",
+      "debitHardwareFund": false,
+      "channel": {
+        "brand": "EIR",
+        "channelName": "TELESALES",
+        "channelType": "INDIRECT"
+      },
+      "user": {
+        "name": "Steve"
+      },
+      "customer": {
+        "owner": {
+          "email": "steve.test@eir.ie",
+          "contactPhoneNumber": "2321312",
+          "contactMobileNumber": "08731112345",
+          "personValue": {
+            "title": "MR",
+            "firstName": "Steve",
+            "lastName": "Test"
+          },
+          "deliveryAddress": {
+            "addressValue": {
+              "eircode": "D10AZ12",
+              "addressLine1": "Address Line 1",
+              "addressLine2": "Address Line 2",
+              "addressLine3": "Address Line 3",
+              "town": "Dublin",
+              "county": "CO_DUBLIN",
+              "country": "Ireland"
+            }
+          }
+        },
+        "existingAccount": {
+          "subscriptionAccountId": "$subscriptionAccountId",
+          "billingAccountId": "$billingAccountId"
+        }
+      },
+      "offers": [
+        {
+          "catalogOfferId": 3001,
+          "offerType": "POSTPAY",
+          "domain": "MOBILE",
+          "tariffPlanCode": "ABC",
+          "service": {
+            "directoryPreference": "EXDIRECTORY"
+          },
+          "subscriber": {
+            "name": "Steve Test",
+            "vip": true,
+            "costCenter": "Dublin"
+          },
+          "item": {
+            "equipments": [
+              {
+                "catalogItemId": 31010
+              },
+              {
+                "catalogItemId": 2402,
+				 "pricePlans": [
+                  {
+                    "catalogItemId": 2027,
+                    "price": 5999
+                  }
+                ],
+                "deviceEnrolled": true
+              }
+            ],
+            "networks": [
+              {
+                "catalogItemId": 75
+              },
+			   {
+                "catalogItemId": 61
+              },
+			   {
+                "catalogItemId": 45
+              },
+			   {
+                "catalogItemId": 79
+              }
+            ],
+            "charges": [
+              {
+                "catalogItemId": 33002,
+                "pricePlan": {
+                  "catalogItemId": 36077,
+                  "price": 8000
+                }
+              }
+            ],
+            "addOns": [
+              {
+                "catalogItemId": 37010
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
